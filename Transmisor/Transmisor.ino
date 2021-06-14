@@ -22,8 +22,8 @@ Please, like share and subscribe : https://www.youtube.com/c/ELECTRONOOBS
 #include <RF24.h>
 
 const uint64_t my_radio_pipe = 0xE8E8F0F0E1LL; //Remember that this code should be the same for the receiver
-const int t1=5,t2=6;
-RF24 radio(9, 10);
+const int t1=2,t2=15;
+RF24 radio(4, 5);
 
 // The sizeof this struct should not exceed 32 bytes
 struct Data_to_be_sent {
@@ -59,9 +59,9 @@ void loop()
   if(digitalRead(t1)){
     sent_data.ch1 =250 ;
     }
-if(digitalRead(t2)){
+  if(digitalRead(t2)){
     sent_data.ch1 =180 ;
     }
-    
+    Serial.println(sent_data.ch1);
   radio.write(&sent_data, sizeof(Data_to_be_sent));
 }
