@@ -28,10 +28,6 @@ struct Data_to_be_sent {
 Data_to_be_sent sent_data;
 
 
-
-
-
-
 int  i=0;
 char input;
 int delayms=7000;
@@ -48,7 +44,7 @@ BluetoothSerial SerialBT;
 
 void setup() {
 //------------ RF--------------------
-radio.begin();
+  radio.begin();
   radio.setAutoAck(false);
   radio.setDataRate(RF24_250KBPS);
   radio.openWritingPipe(my_radio_pipe);  
