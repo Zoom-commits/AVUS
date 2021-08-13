@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=NetBT1_N Pin=R-2
+Added Component: Designator=R2(RESC3116X65N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "RC1206JR-0713RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "3116 Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/RC1206JR-0713RL/Yageo/view-part/105893/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetBT1_N Pin=R2-2
+Added Pin To Net: NetName=NetR2_1 Pin=R2-1
+Added Pin To Net: NetName=NetR2_1 Pin=S1-1
+Added Pin To Net: NetName=NetR2_1 Pin=U1-1
+Added Net: Name=NetR2_1

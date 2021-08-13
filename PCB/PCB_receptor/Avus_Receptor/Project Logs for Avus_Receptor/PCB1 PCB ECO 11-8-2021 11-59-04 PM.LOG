@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=VCC Pin=LS-P
+Change Component Footprint: Designator=  Old Footprint=8S2_L New Footprint=8S2_L
+Change Component Designator: OldDesignator=  NewDesignator=U1
+Added Component: Designator=BT1(BAT_VL-2320/HFN)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "VL-2320/HFN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=BT2(BAT_VL-2320/HFN)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "VL-2320/HFN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=BT1-N
+Added Pin To Net: NetName=VCC Pin=BT1-P
+Added Pin To Net: NetName=VCC Pin=BT2-N
+Change Net Name : Old Net Name=VCC New Net Name=NetBT1_P
+Added Pin To Net: NetName=NetBT2_P Pin=BT2-P
+Added Pin To Net: NetName=NetBT2_P Pin=LS-P
+Added Net: Name=NetBT2_P

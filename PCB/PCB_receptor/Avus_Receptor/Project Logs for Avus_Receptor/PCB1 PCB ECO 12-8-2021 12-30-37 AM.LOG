@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=GND Pin=BT1-N
+Removed Pin From Net: NetName=NetBT1_P Pin=BT1-P
+Removed Pin From Net: NetName=NetBT1_P Pin=BT2-N
+Added Pin To Net: NetName=NetBT1_P Pin=BT1-N
+Added Pin To Net: NetName=GND Pin=BT2-N
+Added Pin To Net: NetName=NetBT1_P Pin=BT2-P
+Change Net Name : Old Net Name=NetBT1_P New Net Name=NetBT1_N
+Added Pin To Net: NetName=NetBT1_P Pin=BT1-P
+Added Pin To Net: NetName=NetBT1_P Pin=LS-P
+Added Net: Name=NetBT1_P
