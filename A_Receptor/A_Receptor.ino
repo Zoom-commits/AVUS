@@ -21,7 +21,8 @@ Please, like share and subscribe : https://www.youtube.com/c/ELECTRONOOBS
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
-
+#define RX_ADDRESS "AVUS"
+const byte rxAddr[6] = RX_ADDRESS;
 const uint64_t pipeIn = 0xE8E8F0F0E1LL;     //Remember that this code is the same as in the transmitter
 const int led1=4;
  RF24 radio(3, 3);  //CSN and CE pins//TINNY
@@ -42,12 +43,12 @@ void setup()
 {
   //We reset the received values
   received_data.ch1 = 127;
-/// Serial.begin(9600);
+ Serial.begin(9600);
   //Once again, begin and radio configuration
   radio.begin();
   radio.setAutoAck(1);
   radio.setRetries(0,15); 
-  radio.openReadingPipe(1,pipeIn);
+  radio.openReadingPipe(1,rxAddr);
   
   //We start the radio comunication
   radio.startListening();
@@ -76,7 +77,7 @@ void loop()
 
   
   ch1_value = received_data.ch1;
-  //Serial.println(ch1_value);
+  Serial.println(ch1_value);
   if(ch1_value==250){
     digitalWrite(led1, HIGH);
     }else{

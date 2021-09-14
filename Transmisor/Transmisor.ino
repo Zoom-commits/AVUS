@@ -61,14 +61,9 @@ void loop()
   Normal:    data.ch1 = map( analogRead(A0), 0, 1024, 0, 255);
   Reversed:  data.ch1 = map( analogRead(A0), 0, 1024, 255, 0);  */
 
-  if(digitalRead(t1)){
-    sent_data.ch1 =250 ;
-    }
-  else if(digitalRead(t2)){
-    sent_data.ch1 =180 ;
-    }else{
-       sent_data.ch1 =5 ;
-      }
+  
+       sent_data.ch1 =150 ;
+      
     Serial.println(sent_data.ch1);
   radio.write(&sent_data, sizeof(Data_to_be_sent));
 }
