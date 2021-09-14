@@ -1,0 +1,3 @@
+Par instalar la libreria DOS SPI
+Copie las carpetas "SD" y "SPI" en las librerias de la esp32 y elimine las de arduino
+Hay un ejemplo de funcionamiento en la carpeta "DosSPI"
