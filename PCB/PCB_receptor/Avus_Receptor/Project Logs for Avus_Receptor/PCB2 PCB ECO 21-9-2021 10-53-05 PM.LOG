@@ -1,0 +1,186 @@
+Added Component: Designator=3.3v regudador(SOT229P700X180-4N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Advanced Monolithic Systems"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "AMS1117-3.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/AMS1117-3.3/Advanced%20Monolithic%20Systems/view-part/53450/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C4(CAPC1608X90)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "311-1344-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/yageo/CC0603KRX7R9BB104/311-1344-1-ND/2103128?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "CC0603KRX7R9BB104"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CC0603KRX7R9BB104/Yageo/view-part/78680/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C5(CAPC2012X94N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "0805YC103J4T2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2012 AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0805YC103J4T2A/AVX/view-part/606803/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C6(CAPC2012X94N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "0805YC103J4T2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2012 AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0805YC103J4T2A/AVX/view-part/606803/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C(CAPC1608X90)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "311-1344-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/yageo/CC0603KRX7R9BB104/311-1344-1-ND/2103128?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "CC0603KRX7R9BB104"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CC0603KRX7R9BB104/Yageo/view-part/78680/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J(HANDSON_KF301-2P)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Handson Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "KF301-2P"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Package"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/KF301-2P/Handson%20Technology/view-part/4276957/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=LS1(XDCR_AI-2331-TWT-R)
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/AI-2331-TWT-R/PUI%20Audio/view-part/295282/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "PUI Audio"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "AI-2331-TWT-R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/AI-2331-TWT-R/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/AI-2331-TWT-R/PUI%20Audio/view-part/295282/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=nrf24l01(NRF24L01)
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "311-0.0ERCT-ND"; VariantName = "[No Variations]"
+Added Component: Designator=Q1(SOT-23B_N)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "29-May-2009"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "IPC-7351 Footprint Added."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "3-Pin SOT-23 Package 0.95 mm Pitch, 2.4 mm Lead Span"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "SOT-23B"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "Aug-1999"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESC1608X50N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "RP73D1J13RBTDG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 TE Connectivity / AMP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/RP73D1J13RBTDG/TE%20Connectivity/view-part/970906/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TE_purchase_URL"; Value = "https://www.te.com/usa-en/product-RP73D1J13RBTDG.html?te_bu=Cor&te_type=disp&te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&elqCampaignId=32493"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R3(RESC2012X65N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "2-2176053-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".25 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = ".33"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/2-2176053-0/TE%20Connectivity/view-part/2214508/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R(RESC1608X50N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "RP73D1J13RBTDG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 TE Connectivity / AMP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/RP73D1J13RBTDG/TE%20Connectivity/view-part/970906/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TE_purchase_URL"; Value = "https://www.te.com/usa-en/product-RP73D1J13RBTDG.html?te_bu=Cor&te_type=disp&te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&elqCampaignId=32493"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=SW?(Omron_0_MFG)
+Added Component: Designator=U(QFP80P900X900X120-32N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ATMEGA328P-AU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TQFP-32 Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ATMEGA328P-AU/Microchip/view-part/44280/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=Y1(OSC_CSTCE8M00G52-R0)
+Add component (AddParameter): Name = "Availability"; Value = "Bad"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/CSTCE8M00G52-R0/Murata%20Electronics%20North%20America/view-part/234504/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Murata"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "CSTCE8M00G52-R0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Surface Mount Murata Electronics North America"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CSTCE8M00G52-R0/Murata%20Electronics%20North%20America/view-part/234504/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3v3 Pin=3.3v regudador-2
+Added Pin To Net: NetName=3v3 Pin=C4-1
+Added Pin To Net: NetName=3v3 Pin=C5-2
+Added Pin To Net: NetName=3v3 Pin=nrf24l01-1
+Added Pin To Net: NetName=3v3 Pin=R-1
+Added Pin To Net: NetName=3v3 Pin=R-2
+Added Pin To Net: NetName=3v3 Pin=R1-2
+Added Pin To Net: NetName=3v3 Pin=U-29
+Added Net: Name=3v3
+Added Pin To Net: NetName=GND Pin=3.3v regudador-1
+Added Pin To Net: NetName=GND Pin=C-2
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=GND Pin=J-2
+Added Pin To Net: NetName=GND Pin=nrf24l01-2
+Added Pin To Net: NetName=GND Pin=Q1-3
+Added Pin To Net: NetName=GND Pin=SW?-1
+Added Pin To Net: NetName=GND Pin=U-3
+Added Pin To Net: NetName=GND Pin=U-5
+Added Pin To Net: NetName=GND Pin=U-21
+Added Pin To Net: NetName=GND Pin=Y1-2
+Added Net: Name=GND
+Added Pin To Net: NetName=Net3.3v regudador_3 Pin=3.3v regudador-3
+Added Pin To Net: NetName=Net3.3v regudador_3 Pin=C6-2
+Added Pin To Net: NetName=Net3.3v regudador_3 Pin=J-1
+Added Pin To Net: NetName=Net3.3v regudador_3 Pin=LS1-P
+Added Net: Name=Net3.3v regudador_3
+Added Pin To Net: NetName=NetC_1 Pin=C-1
+Added Pin To Net: NetName=NetC_1 Pin=U-20
+Added Net: Name=NetC_1
+Added Pin To Net: NetName=NetLS1_N Pin=LS1-N
+Added Pin To Net: NetName=NetLS1_N Pin=Q1-1
+Added Net: Name=NetLS1_N
+Added Pin To Net: NetName=Netnrf24l01_3 Pin=nrf24l01-3
+Added Pin To Net: NetName=Netnrf24l01_3 Pin=U-13
+Added Net: Name=Netnrf24l01_3
+Added Pin To Net: NetName=Netnrf24l01_4 Pin=nrf24l01-4
+Added Pin To Net: NetName=Netnrf24l01_4 Pin=U-14
+Added Net: Name=Netnrf24l01_4
+Added Pin To Net: NetName=Netnrf24l01_5 Pin=nrf24l01-5
+Added Pin To Net: NetName=Netnrf24l01_5 Pin=U-17
+Added Net: Name=Netnrf24l01_5
+Added Pin To Net: NetName=Netnrf24l01_6 Pin=nrf24l01-6
+Added Pin To Net: NetName=Netnrf24l01_6 Pin=U-15
+Added Net: Name=Netnrf24l01_6
+Added Pin To Net: NetName=Netnrf24l01_7 Pin=nrf24l01-7
+Added Pin To Net: NetName=Netnrf24l01_7 Pin=U-16
+Added Net: Name=Netnrf24l01_7
+Added Pin To Net: NetName=NetQ1_2 Pin=Q1-2
+Added Pin To Net: NetName=NetQ1_2 Pin=R3-2
+Added Net: Name=NetQ1_2
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=SW?-2
+Added Pin To Net: NetName=NetR1_1 Pin=U-12
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=U-1
+Added Net: Name=NetR3_1
+Added Pin To Net: NetName=NetU_4 Pin=U-4
+Added Pin To Net: NetName=NetU_4 Pin=U-6
+Added Pin To Net: NetName=NetU_4 Pin=U-18
+Added Net: Name=NetU_4
+Added Pin To Net: NetName=NetU_7 Pin=U-7
+Added Pin To Net: NetName=NetU_7 Pin=Y1-1
+Added Net: Name=NetU_7
+Added Pin To Net: NetName=NetU_8 Pin=U-8
+Added Pin To Net: NetName=NetU_8 Pin=Y1-3
+Added Net: Name=NetU_8

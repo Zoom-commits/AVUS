@@ -1,0 +1,34 @@
+Removed Pin From Net: NetName=NetR3_1 Pin=U-1
+Removed Pin From Net: NetName=GND Pin=U-3
+Removed Pin From Net: NetName=GND Pin=U-5
+Removed Pin From Net: NetName=NetR1_1 Pin=U-12
+Removed Pin From Net: NetName=Netnrf24l01_3 Pin=U-13
+Removed Pin From Net: NetName=Netnrf24l01_4 Pin=U-14
+Removed Pin From Net: NetName=Netnrf24l01_6 Pin=U-15
+Removed Pin From Net: NetName=Netnrf24l01_7 Pin=U-16
+Removed Pin From Net: NetName=Netnrf24l01_5 Pin=U-17
+Removed Pin From Net: NetName=NetC_1 Pin=U-20
+Removed Pin From Net: NetName=GND Pin=U-21
+Removed Pin From Net: NetName=3v3 Pin=U-29
+Change Component Designator: OldDesignator=SW? NewDesignator=SW
+Added Component: Designator=U?(Microchip_C04-074_IPC_C)
+Added Pin To Net: NetName=NetR3_1 Pin=U?-1
+Added Pin To Net: NetName=GND Pin=U?-5
+Added Pin To Net: NetName=NetR1_1 Pin=U?-12
+Added Pin To Net: NetName=Netnrf24l01_3 Pin=U?-13
+Added Pin To Net: NetName=Netnrf24l01_4 Pin=U?-14
+Added Pin To Net: NetName=Netnrf24l01_6 Pin=U?-15
+Added Pin To Net: NetName=Netnrf24l01_7 Pin=U?-16
+Added Pin To Net: NetName=Netnrf24l01_5 Pin=U?-17
+Added Pin To Net: NetName=NetC_1 Pin=U?-20
+Added Pin To Net: NetName=GND Pin=U?-21
+Added Pin To Net: NetName=3v3 Pin=U?-29
+Added Pin To Net: NetName=NetU?_4 Pin=U?-4
+Added Pin To Net: NetName=NetU?_4 Pin=U?-18
+Added Net: Name=NetU?_4
+Added Pin To Net: NetName=NetU?_7 Pin=U?-7
+Added Pin To Net: NetName=NetU?_7 Pin=Y1-1
+Added Net: Name=NetU?_7
+Added Pin To Net: NetName=NetU?_8 Pin=U?-8
+Added Pin To Net: NetName=NetU?_8 Pin=Y1-3
+Added Net: Name=NetU?_8
