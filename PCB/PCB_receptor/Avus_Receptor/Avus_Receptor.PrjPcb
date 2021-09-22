@@ -547,6 +547,23 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=CVMJUDIE
 
+[Document31]
+DocumentPath=PCB4.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=CJVQKRAA
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for Avus_Receptor\NC Drill\PCB1.DRR
 DItemRevisionGUID=
