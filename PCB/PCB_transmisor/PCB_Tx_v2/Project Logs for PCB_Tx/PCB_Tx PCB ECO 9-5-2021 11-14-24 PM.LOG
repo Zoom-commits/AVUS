@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=NetD1_29 Pin=D1-33
+Removed Pin From Net: NetName=NetD1_30 Pin=D1-34
+Removed Pin From Net: NetName=NetD1_31 Pin=D1-35
+Removed Pin From Net: NetName=NetButton 1_2 Pin=D1-37
+Change Component Footprint: Designator=D1 Old Footprint= New Footprint=MODULE_ESP32-WROOM-32D
+Added Pin To Net: NetName=NetButton 1_2 Pin=D1-33
+Added Pin To Net: NetName=NetButton 2_2 Pin=D1-36
+Added Pin To Net: NetName=NetD1_37 Pin=D1-37
+Added Pin To Net: NetName=GND Pin=D1-38

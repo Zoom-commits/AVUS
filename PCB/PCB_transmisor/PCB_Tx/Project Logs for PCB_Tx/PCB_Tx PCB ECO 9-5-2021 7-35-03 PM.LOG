@@ -1,7 +1,0 @@
-Change Component Designator: OldDesignator=J7 NewDesignator=AUDIO
-Change Component Designator: OldDesignator=nrf1 NewDesignator=NRF
-Change Component Designator: OldDesignator=U1 NewDesignator=MAX
-Change Component Designator: OldDesignator=U2 NewDesignator=WRITE
-Change Net Name : Old Net Name=NetC3_220pF_1 New Net Name=NetAUDIO_1
-Change Net Name : Old Net Name=NetC4_220pF_1 New Net Name=NetAUDIO_2
-Change Net Name : Old Net Name=NetR_1M [105]_1 New Net Name=NetMAX_4

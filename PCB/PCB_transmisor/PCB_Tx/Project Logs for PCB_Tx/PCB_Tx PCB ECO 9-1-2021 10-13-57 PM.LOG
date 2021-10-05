@@ -1,9 +1,0 @@
-Added Component: Designator=U(QFN50P300X300X80-17N)
-Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
-Add component (AddParameter): Name = "MF"; Value = "Maxim Integrated"; VariantName = "[No Variations]"
-Add component (AddParameter): Name = "MP"; Value = "MAX98357AETE+"; VariantName = "[No Variations]"
-Add component (AddParameter): Name = "Package"; Value = "TQFN-16 Maxim"; VariantName = "[No Variations]"
-Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
-Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MAX98357AETE%2B/Maxim%20Integrated/view-part/229145/?ref=snap"; VariantName = "[No Variations]"
-Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
-Added Member To Class: ClassName=SCH_tx Member=Component U MAX98357AETE+
