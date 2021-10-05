@@ -72,7 +72,7 @@ GenerateClassCluster=0
 DocumentUniqueId=JCUPLJDT
 
 [Document3]
-DocumentPath=Libraries\ESP32.PcbLib
+DocumentPath=Libraries\nrf.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -86,10 +86,10 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=GMIVLSFD
+DocumentUniqueId=DCWNNYII
 
 [Document4]
-DocumentPath=Libraries\USB3076-XX-X_REVC\MicroUSB.PcbLib
+DocumentPath=Libraries\regulador33.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -106,6 +106,57 @@ GenerateClassCluster=0
 DocumentUniqueId=GMIVLSFD
 
 [Document5]
+DocumentPath=Libraries\74LVC125APW118.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=JRWXCTGO
+
+[Document6]
+DocumentPath=Libraries\ESP32.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=GMIVLSFD
+
+[Document7]
+DocumentPath=Libraries\USB3076-XX-X_REVC\MicroUSB.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=GMIVLSFD
+
+[Document8]
 DocumentPath=Libraries\Botones.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -122,7 +173,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RVVOFDEQ
 
-[Document6]
+[Document9]
 DocumentPath=IC_Maxim Electronics_MAX98357AETE+T\parts\IC_Maxim_Electronics_MAX98357AETE+T_eec_0.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -139,7 +190,58 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MXENAQSN
 
-[Document7]
+[Document10]
+DocumentPath=Libraries\nrf.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=DILMUQWH
+
+[Document11]
+DocumentPath=Libraries\regulador33.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=TKHANPQA
+
+[Document12]
+DocumentPath=Libraries\74LVC125APW118.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=BTQDSLGH
+
+[Document13]
 DocumentPath=Libraries\ESP32-Sense_Kit_Motherboard_Library.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -156,7 +258,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XWXQJTRU
 
-[Document8]
+[Document14]
 DocumentPath=Libraries\USB3076-XX-X_REVC\MicroUSB.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -173,7 +275,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JVHTISAB
 
-[Document9]
+[Document15]
 DocumentPath=Libraries\Botones.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -190,24 +292,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JDWUEIVJ
 
-[Document10]
-DocumentPath=PCB_tx.SchLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=KOIVOKUT
-
-[Document11]
+[Document16]
 DocumentPath=IC_Maxim Electronics_MAX98357AETE+T\parts\IC_Maxim_Electronics_MAX98357AETE+T_eec.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -224,7 +309,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UWKWKHAY
 
-[Document12]
+[Document17]
 DocumentPath=Kütüphaneler\Stm32.Proje.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -241,7 +326,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QVLSRNHW
 
-[Document13]
+[Document18]
 DocumentPath=Kütüphaneler\Stm32.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -258,7 +343,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NCQBCGMB
 
-[Document14]
+[Document19]
 DocumentPath=PCB_TX_N.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -1524,29 +1609,41 @@ Net9=NetName=NetButton 5_2|NetColor=$00C5DEE5
 Net10=NetName=NetButton 6_2|NetColor=$00C5DEE5
 Net11=NetName=NetC8_1uF_2|NetColor=$0000BE00
 Net12=NetName=NetC9_1uF_2|NetColor=$0000BE00
-Net13=NetName=NetD1_10|NetColor=clYellow
-Net14=NetName=NetD1_11|NetColor=clYellow
-Net15=NetName=NetD1_12|NetColor=clYellow
-Net16=NetName=NetD1_13|NetColor=$000083FD
-Net17=NetName=NetD1_16|NetColor=$000083FD
-Net18=NetName=NetD1_23|NetColor=$000083FD
-Net19=NetName=NetD1_26|NetColor=$00FF6E6E
-Net20=NetName=NetD1_29|NetColor=$00FF6E6E
-Net21=NetName=NetD1_30|NetColor=$00FF6E6E
-Net22=NetName=NetD1_31|NetColor=$00FF6E6E
-Net23=NetName=NetD1_37|NetColor=$00FF6E6E
-Net24=NetName=NetD1_8|NetColor=$000083FD
-Net25=NetName=NetFL1_1|NetColor=clYellow
-Net26=NetName=NetFL2_1|NetColor=clYellow
-Net27=NetName=NetMAX_4|NetColor=clYellow
-Net28=NetName=NetR1_3.3K_1|NetColor=$000083FD
-Net29=NetName=NetR2_3.3K_1|NetColor=$000083FD
-Net30=NetName=NetR3_3.3K_1|NetColor=$000083FD
-Net31=NetName=NetR4_3.3K_1|NetColor=$000083FD
-Net32=NetName=NetR4_3.3K_2|NetColor=$000083FD
-Net33=NetName=NetSD_2|NetColor=$000083FD
-Net34=NetName=NetSD_3|NetColor=$000083FD
-Net35=NetName=NetSD_5|NetColor=$000083FD
+Net13=NetName=NetD?_10|NetColor=clYellow
+Net14=NetName=NetD?_11|NetColor=clYellow
+Net15=NetName=NetD?_12|NetColor=clYellow
+Net16=NetName=NetD?_13|NetColor=$000083FD
+Net17=NetName=NetD?_16|NetColor=$000083FD
+Net18=NetName=NetD?_23|NetColor=$000083FD
+Net19=NetName=NetD?_26|NetColor=$00FFFF6E
+Net20=NetName=NetD?_29|NetColor=$00FFFF6E
+Net21=NetName=NetD?_30|NetColor=$00FFFF6E
+Net22=NetName=NetD?_31|NetColor=$00FFFF6E
+Net23=NetName=NetD?_37|NetColor=$00FFFF6E
+Net24=NetName=NetD?_8|NetColor=$000083FD
+Net25=NetName=NetD1_10|NetColor=clYellow
+Net26=NetName=NetD1_11|NetColor=clYellow
+Net27=NetName=NetD1_12|NetColor=clYellow
+Net28=NetName=NetD1_13|NetColor=$000083FD
+Net29=NetName=NetD1_16|NetColor=$000083FD
+Net30=NetName=NetD1_23|NetColor=$000083FD
+Net31=NetName=NetD1_26|NetColor=$00FF6E6E
+Net32=NetName=NetD1_29|NetColor=$00FF6E6E
+Net33=NetName=NetD1_30|NetColor=$00FF6E6E
+Net34=NetName=NetD1_31|NetColor=$00FF6E6E
+Net35=NetName=NetD1_37|NetColor=$00FF6E6E
+Net36=NetName=NetD1_8|NetColor=$000083FD
+Net37=NetName=NetFL1_1|NetColor=clYellow
+Net38=NetName=NetFL2_1|NetColor=clYellow
+Net39=NetName=NetMAX_4|NetColor=clYellow
+Net40=NetName=NetR1_3.3K_1|NetColor=$000083FD
+Net41=NetName=NetR2_3.3K_1|NetColor=$000083FD
+Net42=NetName=NetR3_3.3K_1|NetColor=$000083FD
+Net43=NetName=NetR4_3.3K_1|NetColor=$000083FD
+Net44=NetName=NetR4_3.3K_2|NetColor=$000083FD
+Net45=NetName=NetSD_2|NetColor=$000083FD
+Net46=NetName=NetSD_3|NetColor=$000083FD
+Net47=NetName=NetSD_5|NetColor=$000083FD
 
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=0|Confirm=-1|UseName=-1|InclAllRules=0

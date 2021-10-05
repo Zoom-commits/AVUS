@@ -1,0 +1,40 @@
+Removed Pin From Net: NetName=GND Pin=WRITE-1
+Removed Pin From Net: NetName=NetR1_3.3K_1 Pin=WRITE-2
+Removed Pin From Net: NetName=NetSD_3 Pin=WRITE-3
+Removed Pin From Net: NetName=GND Pin=WRITE-4
+Removed Pin From Net: NetName=NetR2_3.3K_1 Pin=WRITE-5
+Removed Pin From Net: NetName=NetSD_5 Pin=WRITE-6
+Removed Pin From Net: NetName=GND Pin=WRITE-7
+Removed Pin From Net: NetName=NetSD_2 Pin=WRITE-8
+Removed Pin From Net: NetName=NetR3_3.3K_1 Pin=WRITE-9
+Removed Pin From Net: NetName=GND Pin=WRITE-10
+Removed Pin From Net: NetName=NetD?_8 Pin=WRITE-11
+Removed Pin From Net: NetName=NetR4_3.3K_1 Pin=WRITE-12
+Removed Pin From Net: NetName=GND Pin=WRITE-13
+Removed Pin From Net: NetName=3v3 Pin=WRITE-14
+Removed Member From Class: ClassName=SCH_tx Member=WRITE
+Added Component: Designator=uSD(SOP65P640X110-14N)
+Add component (AddParameter): Name = "Availability"; Value = "Good"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/74LVC125APW,118/Nexperia/view-part/5160321/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Nexperia USA Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "74LVC125APW,118"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/74LVC125APW,118/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/74LVC125APW,118/Nexperia/view-part/5160321/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=uSD-1
+Added Pin To Net: NetName=NetR1_3.3K_1 Pin=uSD-2
+Added Pin To Net: NetName=NetSD_3 Pin=uSD-3
+Added Pin To Net: NetName=GND Pin=uSD-4
+Added Pin To Net: NetName=NetR2_3.3K_1 Pin=uSD-5
+Added Pin To Net: NetName=NetSD_5 Pin=uSD-6
+Added Pin To Net: NetName=GND Pin=uSD-7
+Added Pin To Net: NetName=NetSD_2 Pin=uSD-8
+Added Pin To Net: NetName=NetR3_3.3K_1 Pin=uSD-9
+Added Pin To Net: NetName=GND Pin=uSD-10
+Added Pin To Net: NetName=NetD?_8 Pin=uSD-11
+Added Pin To Net: NetName=NetR4_3.3K_1 Pin=uSD-12
+Added Pin To Net: NetName=GND Pin=uSD-13
+Added Pin To Net: NetName=3v3 Pin=uSD-14
+Added Member To Class: ClassName=SCH_tx Member=Component uSD 74LVC125APW,118

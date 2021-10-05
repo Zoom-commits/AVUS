@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=3v3 Pin=NRF-1
+Removed Pin From Net: NetName=GND Pin=NRF-2
+Removed Pin From Net: NetName=NetD?_26 Pin=NRF-3
+Removed Pin From Net: NetName=NetD?_29 Pin=NRF-4
+Removed Pin From Net: NetName=NetD?_30 Pin=NRF-5
+Removed Pin From Net: NetName=NetD?_37 Pin=NRF-6
+Removed Pin From Net: NetName=NetD?_31 Pin=NRF-7
+Removed Member From Class: ClassName=SCH_tx Member=NRF
+Added Component: Designator=nrf24l01?(NRF24L01)
+Added Pin To Net: NetName=3v3 Pin=nrf24l01?-1
+Added Pin To Net: NetName=GND Pin=nrf24l01?-2
+Added Pin To Net: NetName=NetD?_26 Pin=nrf24l01?-3
+Added Pin To Net: NetName=NetD?_29 Pin=nrf24l01?-4
+Added Pin To Net: NetName=NetD?_30 Pin=nrf24l01?-5
+Added Pin To Net: NetName=NetD?_37 Pin=nrf24l01?-6
+Added Pin To Net: NetName=NetD?_31 Pin=nrf24l01?-7
+Added Member To Class: ClassName=SCH_tx Member=Component nrf24l01? SMD
