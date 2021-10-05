@@ -1,0 +1,40 @@
+Removed Pin From Net: NetName=3v3 Pin=Button 1-1
+Removed Pin From Net: NetName=3v3 Pin=Button 2-1
+Removed Pin From Net: NetName=3v3 Pin=Button 4-1
+Removed Pin From Net: NetName=3v3 Pin=Button 5-1
+Removed Pin From Net: NetName=3v3 Pin=Button 6-1
+Removed Member From Class: ClassName=SCH_tx Member=Button 1
+Removed Member From Class: ClassName=SCH_tx Member=Button 2
+Removed Member From Class: ClassName=SCH_tx Member=Button 4
+Removed Member From Class: ClassName=SCH_tx Member=Button 5
+Removed Member From Class: ClassName=SCH_tx Member=Button 6
+Added Component: Designator=nrf24l01?(NRF24L01)
+Added Component: Designator=U(QFP80P900X900X120-32N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ATMEGA328P-AU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TQFP-32 Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ATMEGA328P-AU/Microchip/view-part/44280/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetB_1_2 Pin=D1-33
+Added Pin To Net: NetName=NetB_1_2 Pin=R4_1K-1
+Added Net: Name=NetB_1_2
+Added Pin To Net: NetName=NetB_2_2 Pin=D1-36
+Added Pin To Net: NetName=NetB_2_2 Pin=R6_1K-1
+Added Net: Name=NetB_2_2
+Added Pin To Net: NetName=NetB_3_2 Pin=D1-24
+Added Pin To Net: NetName=NetB_3_2 Pin=R8_1K-1
+Added Net: Name=NetB_3_2
+Added Pin To Net: NetName=NetB_4_2 Pin=D1-9
+Added Pin To Net: NetName=NetB_4_2 Pin=R5_1K-2
+Added Net: Name=NetB_4_2
+Added Pin To Net: NetName=NetB_5_2 Pin=D1-6
+Added Pin To Net: NetName=NetB_5_2 Pin=R7_1K-2
+Added Net: Name=NetB_5_2
+Added Pin To Net: NetName=NetB_6_2 Pin=D1-7
+Added Pin To Net: NetName=NetB_6_2 Pin=R9_1K-2
+Added Net: Name=NetB_6_2
+Added Member To Class: ClassName=SCH_Rx Member=Component nrf24l01? SMD
+Added Member To Class: ClassName=SCH_Rx Member=Component U ATMEGA328P-AU
+Added Room: Name=SCH_Rx

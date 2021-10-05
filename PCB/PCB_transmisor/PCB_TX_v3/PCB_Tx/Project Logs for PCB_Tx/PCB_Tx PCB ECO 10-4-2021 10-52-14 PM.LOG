@@ -1,0 +1,29 @@
+Removed Pin From Net: NetName=GND Pin=BATTERY-2
+Removed Member From Class: ClassName=SCH_tx Member=BATTERY
+Removed Member From Class: ClassName=SCH_tx Member=LED
+Added Component: Designator=J(GCT_USB3076-XX-X_REVC)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Global Connector Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "USB3076-30-A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/USB3076-30-A/Global%20Connector%20Technology/view-part/276912/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=nrf24l01?(NRF24L01)
+Added Component: Designator=U(QFP80P900X900X120-32N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ATMEGA328P-AU"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TQFP-32 Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ATMEGA328P-AU/Microchip/view-part/44280/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J-5
+Added Pin To Net: NetName=NetC7_10uF_2 Pin=C7_10uF-2
+Added Pin To Net: NetName=NetC7_10uF_2 Pin=J-1
+Added Pin To Net: NetName=NetC7_10uF_2 Pin=R_1K-2
+Added Pin To Net: NetName=NetC7_10uF_2 Pin=R_3V3-3
+Added Net: Name=NetC7_10uF_2
+Added Class: Name=SCH_Rx
+Added Member To Class: ClassName=SCH_tx Member=Component J USB3076-XX-X_REVC
+Added Room: Name=SCH_Rx
