@@ -1,0 +1,81 @@
+Removed Pin From Net: NetName=GND Pin=D?-1
+Removed Pin From Net: NetName=3v3 Pin=D?-2
+Removed Pin From Net: NetName=NetC8_1uF_2 Pin=D?-3
+Removed Pin From Net: NetName=NetB_5_2 Pin=D?-6
+Removed Pin From Net: NetName=NetB_6_2 Pin=D?-7
+Removed Pin From Net: NetName=NetB_4_2 Pin=D?-9
+Removed Pin From Net: NetName=GND Pin=D?-15
+Removed Pin From Net: NetName=NetB_3_2 Pin=D?-24
+Removed Pin From Net: NetName=NetC9_1uF_2 Pin=D?-25
+Removed Pin From Net: NetName=NetB_1_2 Pin=D?-33
+Removed Pin From Net: NetName=NetB_2_2 Pin=D?-36
+Removed Pin From Net: NetName=GND Pin=D?-38
+Removed Pin From Net: NetName=GND Pin=MAX-17
+Removed Member From Class: ClassName=SCH_tx Member=D?
+Change Component Footprint: Designator=MAX Old Footprint=Maxim_Electronics_21-0896_0 New Footprint=QFN50P300X300X80-17N
+Change Component Comment : Designator=MAX Old Comment= New Comment=MAX98357AETE+
+Change component parameters: Designator = "MAX" ("MAX"); Footprint = "Maxim_Electronics_21-0896_0"; UniqueID = "\EDJOEIHL" ("\EDJOEIHL")
+Change component parameters (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Maxim Integrated"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "MAX98357AETE+"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "TQFN-16 Maxim"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MAX98357AETE%2B/Maxim%20Integrated/view-part/229145/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=D1(XCVR_ESP32-WROOM-32U)
+Added Pin To Net: NetName=GND Pin=D1-1
+Added Pin To Net: NetName=3v3 Pin=D1-2
+Added Pin To Net: NetName=NetC8_1uF_2 Pin=D1-3
+Added Pin To Net: NetName=NetB_5_2 Pin=D1-6
+Added Pin To Net: NetName=NetB_6_2 Pin=D1-7
+Added Pin To Net: NetName=NetB_4_2 Pin=D1-9
+Added Pin To Net: NetName=GND Pin=D1-15
+Added Pin To Net: NetName=NetB_3_2 Pin=D1-24
+Added Pin To Net: NetName=NetC9_1uF_2 Pin=D1-25
+Added Pin To Net: NetName=NetB_1_2 Pin=D1-33
+Added Pin To Net: NetName=NetB_2_2 Pin=D1-36
+Added Pin To Net: NetName=GND Pin=D1-38
+Added Pin To Net: NetName=GND Pin=D1-39
+Added Pin To Net: NetName=NetD1_8 Pin=D1-8
+Added Pin To Net: NetName=NetD1_8 Pin=uSD-11
+Added Net: Name=NetD1_8
+Added Pin To Net: NetName=NetD1_10 Pin=D1-10
+Added Pin To Net: NetName=NetD1_10 Pin=MAX-1
+Added Net: Name=NetD1_10
+Added Pin To Net: NetName=NetD1_11 Pin=D1-11
+Added Pin To Net: NetName=NetD1_11 Pin=MAX-14
+Added Net: Name=NetD1_11
+Added Pin To Net: NetName=NetD1_12 Pin=D1-12
+Added Pin To Net: NetName=NetD1_12 Pin=MAX-16
+Added Net: Name=NetD1_12
+Added Pin To Net: NetName=NetD1_13 Pin=D1-13
+Added Pin To Net: NetName=NetD1_13 Pin=R2_3.3K-2
+Added Net: Name=NetD1_13
+Added Pin To Net: NetName=NetD1_16 Pin=D1-16
+Added Pin To Net: NetName=NetD1_16 Pin=R1_3.3K-2
+Added Net: Name=NetD1_16
+Added Pin To Net: NetName=NetD1_23 Pin=D1-23
+Added Pin To Net: NetName=NetD1_23 Pin=R3_3.3K-2
+Added Net: Name=NetD1_23
+Added Pin To Net: NetName=NetD1_26 Pin=D1-26
+Added Pin To Net: NetName=NetD1_26 Pin=nrf24l01?-3
+Added Net: Name=NetD1_26
+Added Pin To Net: NetName=NetD1_29 Pin=D1-29
+Added Pin To Net: NetName=NetD1_29 Pin=nrf24l01?-4
+Added Net: Name=NetD1_29
+Added Pin To Net: NetName=NetD1_30 Pin=D1-30
+Added Pin To Net: NetName=NetD1_30 Pin=nrf24l01?-5
+Added Net: Name=NetD1_30
+Added Pin To Net: NetName=NetD1_31 Pin=D1-31
+Added Pin To Net: NetName=NetD1_31 Pin=nrf24l01?-7
+Added Net: Name=NetD1_31
+Added Pin To Net: NetName=NetD1_34 Pin=D1-34
+Added Pin To Net: NetName=NetD1_34 Pin=Pin_Rx-1
+Added Net: Name=NetD1_34
+Added Pin To Net: NetName=NetD1_35 Pin=D1-35
+Added Pin To Net: NetName=NetD1_35 Pin=Pin_Tx-1
+Added Net: Name=NetD1_35
+Added Pin To Net: NetName=NetD1_37 Pin=D1-37
+Added Pin To Net: NetName=NetD1_37 Pin=nrf24l01?-6
+Added Net: Name=NetD1_37
+Added Member To Class: ClassName=SCH_tx Member=Component D1 ESP32_MODULE_2

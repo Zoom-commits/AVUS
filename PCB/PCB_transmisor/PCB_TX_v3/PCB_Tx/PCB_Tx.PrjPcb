@@ -72,7 +72,7 @@ GenerateClassCluster=0
 DocumentUniqueId=JCUPLJDT
 
 [Document3]
-DocumentPath=Libraries\nrf.PcbLib
+DocumentPath=Libraries\ESPV2.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -86,10 +86,10 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=DCWNNYII
+DocumentUniqueId=GMIVLSFD
 
 [Document4]
-DocumentPath=Libraries\regulador33.PcbLib
+DocumentPath=Libraries\usbMicro.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -106,24 +106,7 @@ GenerateClassCluster=0
 DocumentUniqueId=GMIVLSFD
 
 [Document5]
-DocumentPath=Libraries\74LVC125APW118.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=JRWXCTGO
-
-[Document6]
-DocumentPath=Libraries\ESP32.PcbLib
+DocumentPath=Libraries\maxi.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -139,8 +122,25 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=GMIVLSFD
 
+[Document6]
+DocumentPath=Libraries\nrf.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=DCWNNYII
+
 [Document7]
-DocumentPath=Libraries\USB3076-XX-X_REVC\MicroUSB.PcbLib
+DocumentPath=Libraries\regulador33.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -157,6 +157,23 @@ GenerateClassCluster=0
 DocumentUniqueId=GMIVLSFD
 
 [Document8]
+DocumentPath=Libraries\74LVC125APW118.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=JRWXCTGO
+
+[Document9]
 DocumentPath=Libraries\Botones.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -173,7 +190,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RVVOFDEQ
 
-[Document9]
+[Document10]
 DocumentPath=IC_Maxim Electronics_MAX98357AETE+T\parts\IC_Maxim_Electronics_MAX98357AETE+T_eec_0.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -190,7 +207,41 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=MXENAQSN
 
-[Document10]
+[Document11]
+DocumentPath=Libraries\ESP32.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=XWXQJTRU
+
+[Document12]
+DocumentPath=Libraries\maxi.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=JVHTISAB
+
+[Document13]
 DocumentPath=Libraries\nrf.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -207,7 +258,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DILMUQWH
 
-[Document11]
+[Document14]
 DocumentPath=Libraries\regulador33.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -224,7 +275,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TKHANPQA
 
-[Document12]
+[Document15]
 DocumentPath=Libraries\74LVC125APW118.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -241,25 +292,8 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BTQDSLGH
 
-[Document13]
-DocumentPath=Libraries\ESP32-Sense_Kit_Motherboard_Library.SchLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=XWXQJTRU
-
-[Document14]
-DocumentPath=Libraries\USB3076-XX-X_REVC\MicroUSB.SchLib
+[Document16]
+DocumentPath=Libraries\usbMicro.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -275,7 +309,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JVHTISAB
 
-[Document15]
+[Document17]
 DocumentPath=Libraries\Botones.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -292,7 +326,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JDWUEIVJ
 
-[Document16]
+[Document18]
 DocumentPath=IC_Maxim Electronics_MAX98357AETE+T\parts\IC_Maxim_Electronics_MAX98357AETE+T_eec.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -309,7 +343,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UWKWKHAY
 
-[Document17]
+[Document19]
 DocumentPath=Kütüphaneler\Stm32.Proje.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -326,7 +360,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QVLSRNHW
 
-[Document18]
+[Document20]
 DocumentPath=Kütüphaneler\Stm32.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -343,7 +377,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=NCQBCGMB
 
-[Document19]
+[Document21]
 DocumentPath=PCB_TX_N.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
