@@ -1,0 +1,69 @@
+Removed Pin From Net: NetName=GND Pin=D1-1
+Removed Pin From Net: NetName=3v3 Pin=D1-2
+Removed Pin From Net: NetName=NetC8_1uF_2 Pin=D1-3
+Removed Pin From Net: NetName=NetB_5_2 Pin=D1-6
+Removed Pin From Net: NetName=NetB_6_2 Pin=D1-7
+Removed Pin From Net: NetName=NetB_4_2 Pin=D1-9
+Removed Pin From Net: NetName=GND Pin=D1-15
+Removed Pin From Net: NetName=NetB_3_2 Pin=D1-24
+Removed Pin From Net: NetName=NetC9_1uF_2 Pin=D1-25
+Removed Pin From Net: NetName=NetB_1_2 Pin=D1-33
+Removed Pin From Net: NetName=NetB_2_2 Pin=D1-36
+Removed Pin From Net: NetName=GND Pin=D1-38
+Removed Member From Class: ClassName=SCH_tx Member=D1
+Added Component: Designator=D?(MODULE_ESP32-WROOM-32D)
+Added Pin To Net: NetName=GND Pin=D?-1
+Added Pin To Net: NetName=3v3 Pin=D?-2
+Added Pin To Net: NetName=NetC8_1uF_2 Pin=D?-3
+Added Pin To Net: NetName=NetB_5_2 Pin=D?-6
+Added Pin To Net: NetName=NetB_6_2 Pin=D?-7
+Added Pin To Net: NetName=NetB_4_2 Pin=D?-9
+Added Pin To Net: NetName=GND Pin=D?-15
+Added Pin To Net: NetName=NetB_3_2 Pin=D?-24
+Added Pin To Net: NetName=NetC9_1uF_2 Pin=D?-25
+Added Pin To Net: NetName=NetB_1_2 Pin=D?-33
+Added Pin To Net: NetName=NetB_2_2 Pin=D?-36
+Added Pin To Net: NetName=GND Pin=D?-38
+Added Pin To Net: NetName=NetD?_8 Pin=D?-8
+Added Pin To Net: NetName=NetD?_8 Pin=WRITE-11
+Added Net: Name=NetD?_8
+Added Pin To Net: NetName=NetD?_10 Pin=D?-10
+Added Pin To Net: NetName=NetD?_10 Pin=MAX-1
+Added Net: Name=NetD?_10
+Added Pin To Net: NetName=NetD?_11 Pin=D?-11
+Added Pin To Net: NetName=NetD?_11 Pin=MAX-14
+Added Net: Name=NetD?_11
+Added Pin To Net: NetName=NetD?_12 Pin=D?-12
+Added Pin To Net: NetName=NetD?_12 Pin=MAX-16
+Added Net: Name=NetD?_12
+Added Pin To Net: NetName=NetD?_13 Pin=D?-13
+Added Pin To Net: NetName=NetD?_13 Pin=R2_3.3K-2
+Added Net: Name=NetD?_13
+Added Pin To Net: NetName=NetD?_16 Pin=D?-16
+Added Pin To Net: NetName=NetD?_16 Pin=R1_3.3K-2
+Added Net: Name=NetD?_16
+Added Pin To Net: NetName=NetD?_23 Pin=D?-23
+Added Pin To Net: NetName=NetD?_23 Pin=R3_3.3K-2
+Added Net: Name=NetD?_23
+Added Pin To Net: NetName=NetD?_26 Pin=D?-26
+Added Pin To Net: NetName=NetD?_26 Pin=NRF-3
+Added Net: Name=NetD?_26
+Added Pin To Net: NetName=NetD?_29 Pin=D?-29
+Added Pin To Net: NetName=NetD?_29 Pin=NRF-4
+Added Net: Name=NetD?_29
+Added Pin To Net: NetName=NetD?_30 Pin=D?-30
+Added Pin To Net: NetName=NetD?_30 Pin=NRF-5
+Added Net: Name=NetD?_30
+Added Pin To Net: NetName=NetD?_31 Pin=D?-31
+Added Pin To Net: NetName=NetD?_31 Pin=NRF-7
+Added Net: Name=NetD?_31
+Added Pin To Net: NetName=NetD?_34 Pin=D?-34
+Added Pin To Net: NetName=NetD?_34 Pin=Pin_Rx-1
+Added Net: Name=NetD?_34
+Added Pin To Net: NetName=NetD?_35 Pin=D?-35
+Added Pin To Net: NetName=NetD?_35 Pin=Pin_Tx-1
+Added Net: Name=NetD?_35
+Added Pin To Net: NetName=NetD?_37 Pin=D?-37
+Added Pin To Net: NetName=NetD?_37 Pin=NRF-6
+Added Net: Name=NetD?_37
+Added Member To Class: ClassName=SCH_tx Member=Component D? ESP32_MODULE_2
