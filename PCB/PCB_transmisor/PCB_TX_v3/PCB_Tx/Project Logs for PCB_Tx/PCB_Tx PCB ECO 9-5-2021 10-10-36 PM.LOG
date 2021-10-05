@@ -1,0 +1,14 @@
+Change Component Designator: OldDesignator=J1 NewDesignator=Button 1
+Change Component Designator: OldDesignator=J2 NewDesignator=Button 4
+Change Component Designator: OldDesignator=J3 NewDesignator=Button 2
+Change Component Designator: OldDesignator=J4 NewDesignator=Button 5
+Change Component Designator: OldDesignator=J5 NewDesignator=Button 3
+Change Component Designator: OldDesignator=J6 NewDesignator=Button 6
+Change Net Name : Old Net Name=NetD1_6 New Net Name=NetButton 5_2
+Change Net Name : Old Net Name=NetD1_7 New Net Name=NetButton 6_2
+Change Net Name : Old Net Name=NetD1_9 New Net Name=NetButton 4_2
+Change Net Name : Old Net Name=NetD1_24 New Net Name=NetButton 3_2
+Change Net Name : Old Net Name=NetD1_33 New Net Name=NetButton 1_2
+Added Pin To Net: NetName=NetButton 2_2 Pin=Button 2-2
+Added Pin To Net: NetName=NetButton 2_2 Pin=R6_1K-1
+Added Net: Name=NetButton 2_2

@@ -1,0 +1,16 @@
+Added Component: Designator=Pin_Rx(PIN1)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Pin_Tx(PIN1)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD1_34 Pin=D1-34
+Added Pin To Net: NetName=NetD1_34 Pin=Pin_Rx-1
+Added Net: Name=NetD1_34
+Added Pin To Net: NetName=NetD1_35 Pin=D1-35
+Added Pin To Net: NetName=NetD1_35 Pin=Pin_Tx-1
+Added Net: Name=NetD1_35
+Added Member To Class: ClassName=SCH_tx Member=Component Pin_Rx Socket
+Added Member To Class: ClassName=SCH_tx Member=Component Pin_Tx Socket
