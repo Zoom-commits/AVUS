@@ -1,0 +1,13 @@
+Output: OSO3H
+Type  : NC Drill
+From  : PCB Document [PCB_Tx.PcbDoc]
+   Generated File[PCB_Tx-RoundHoles.TXT]
+   Generated File[PCB_Tx-SlotHoles.TXT]
+   Generated File[PCB_Tx.LDP]
+   Generated File[PCB_Tx.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 03:28:06 PM On 14/10/2021

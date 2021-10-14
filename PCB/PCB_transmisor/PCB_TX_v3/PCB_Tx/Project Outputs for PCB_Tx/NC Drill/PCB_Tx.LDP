@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\crida\Documents\GitHub\AVUS\PCB\PCB_transmisor\PCB_TX_v3\PCB_Tx\PCB_Tx.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=pcb_tx-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=pcb_tx-slotholes.txt|DrillLayers=gtl,gbl
