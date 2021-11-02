@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=NetC_1 Pin=LED-1
+Added Pin To Net: NetName=NetDOUT_1 Pin=LED-2
+Added Pin To Net: NetName=NetC_2 Pin=LED-3
+Added Pin To Net: NetName=NetDIN_1 Pin=LED-4
+Added Room: Name=Sheet2
