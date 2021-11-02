@@ -1,0 +1,181 @@
+Removed Pin From Net: NetName=NetD1_2 Pin=D5-2
+Removed Pin From Net: NetName=NetD1_2 Pin=D6-2
+Removed Pin From Net: NetName=NetD1_2 Pin=D7-2
+Removed Pin From Net: NetName=NetD1_2 Pin=D8-2
+Removed Pin From Net: NetName=NetD1_2 Pin=D9-2
+Removed Pin From Net: NetName=NetD1_2 Pin=D10-2
+Removed Pin From Net: NetName=NetD1_2 Pin=D11-2
+Removed Pin From Net: NetName=NetD1_2 Pin=D12-2
+Removed Pin From Net: NetName=NetD1_2 Pin=D13-2
+Removed Pin From Net: NetName=NetD1_2 Pin=D14-2
+Removed Pin From Net: NetName=GND Pin=J1-2
+Removed Pin From Net: NetName=GND Pin=J2-2
+Removed Pin From Net: NetName=GND Pin=J3-2
+Removed Pin From Net: NetName=GND Pin=J4-2
+Removed Pin From Net: NetName=GND Pin=J5-2
+Removed Pin From Net: NetName=GND Pin=J6-2
+Removed Pin From Net: NetName=GND Pin=J7-2
+Removed Pin From Net: NetName=GND Pin=R9-1
+Removed Pin From Net: NetName=GND Pin=R12-1
+Removed Pin From Net: NetName=GND Pin=R19-1
+Removed Pin From Net: NetName=GND Pin=R20-1
+Removed Pin From Net: NetName=GND Pin=R21-1
+Removed Pin From Net: NetName=GND Pin=U3-1
+Removed Pin From Net: NetName=GND Pin=U3-3
+Removed Pin From Net: NetName=NetD1_2 Pin=U3-8
+Removed Pin From Net: NetName=GND Pin=U4-1
+Removed Pin From Net: NetName=GND Pin=U4-3
+Removed Pin From Net: NetName=NetD1_2 Pin=U4-8
+Removed Pin From Net: NetName=GND Pin=U5-1
+Removed Pin From Net: NetName=GND Pin=U5-3
+Removed Pin From Net: NetName=NetD1_2 Pin=U5-8
+Removed Pin From Net: NetName=GND Pin=U6-1
+Removed Pin From Net: NetName=GND Pin=U6-3
+Removed Pin From Net: NetName=NetD1_2 Pin=U6-8
+Removed Pin From Net: NetName=GND Pin=U7-1
+Removed Pin From Net: NetName=GND Pin=U7-3
+Removed Pin From Net: NetName=NetD1_2 Pin=U7-8
+Removed Member From Class: ClassName=schematicCharger Member=D5
+Removed Member From Class: ClassName=schematicCharger Member=D6
+Removed Member From Class: ClassName=schematicCharger Member=D7
+Removed Member From Class: ClassName=schematicCharger Member=D8
+Removed Member From Class: ClassName=schematicCharger Member=D9
+Removed Member From Class: ClassName=schematicCharger Member=D10
+Removed Member From Class: ClassName=schematicCharger Member=D11
+Removed Member From Class: ClassName=schematicCharger Member=D12
+Removed Member From Class: ClassName=schematicCharger Member=D13
+Removed Member From Class: ClassName=schematicCharger Member=D14
+Removed Member From Class: ClassName=schematicCharger Member=J1
+Removed Member From Class: ClassName=schematicCharger Member=J2
+Removed Member From Class: ClassName=schematicCharger Member=J3
+Removed Member From Class: ClassName=schematicCharger Member=J4
+Removed Member From Class: ClassName=schematicCharger Member=J5
+Removed Member From Class: ClassName=schematicCharger Member=J6
+Removed Member From Class: ClassName=schematicCharger Member=J7
+Removed Member From Class: ClassName=schematicCharger Member=R6
+Removed Member From Class: ClassName=schematicCharger Member=R7
+Removed Member From Class: ClassName=schematicCharger Member=R9
+Removed Member From Class: ClassName=schematicCharger Member=R10
+Removed Member From Class: ClassName=schematicCharger Member=R11
+Removed Member From Class: ClassName=schematicCharger Member=R12
+Removed Member From Class: ClassName=schematicCharger Member=R13
+Removed Member From Class: ClassName=schematicCharger Member=R14
+Removed Member From Class: ClassName=schematicCharger Member=R15
+Removed Member From Class: ClassName=schematicCharger Member=R16
+Removed Member From Class: ClassName=schematicCharger Member=R17
+Removed Member From Class: ClassName=schematicCharger Member=R18
+Removed Member From Class: ClassName=schematicCharger Member=R19
+Removed Member From Class: ClassName=schematicCharger Member=R20
+Removed Member From Class: ClassName=schematicCharger Member=R21
+Removed Member From Class: ClassName=schematicCharger Member=U3
+Removed Member From Class: ClassName=schematicCharger Member=U4
+Removed Member From Class: ClassName=schematicCharger Member=U5
+Removed Member From Class: ClassName=schematicCharger Member=U6
+Removed Member From Class: ClassName=schematicCharger Member=U7
+Added Component: Designator=C1(CAPC1608X87N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Multicomp"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "MC0603B105K160CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 Multicomp"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MC0603B105K160CT/Multicomp/view-part/276886/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C2(CAPC1608X87N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Multicomp"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "MC0603B105K160CT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 Multicomp"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MC0603B105K160CT/Multicomp/view-part/276886/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=IC1(SOT23-6)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Fortune Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "DW01A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Package Analog Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/DW01A/Fortune%20Semiconductor/view-part/4388554/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=PIN_BAT2(PIN1)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=PIN_BAT(PIN1)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=PIN_GND2(PIN1)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=PIN_GND(PIN1)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Q1(SOP65P640X120-8N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Fortune Semiconductor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "FS8205A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Package Analog Devices"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/FS8205A/Fortune%20Semiconductor/view-part/3217108/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R22(RESC1608X50N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "RP73D1J13RBTDG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 TE Connectivity / AMP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/RP73D1J13RBTDG/TE%20Connectivity/view-part/970906/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TE_purchase_URL"; Value = "https://www.te.com/usa-en/product-RP73D1J13RBTDG.html?te_bu=Cor&te_type=disp&te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&elqCampaignId=32493"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=R23(RESC1608X50N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "RP73D1J13RBTDG"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603 TE Connectivity / AMP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/RP73D1J13RBTDG/TE%20Connectivity/view-part/970906/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "TE_purchase_URL"; Value = "https://www.te.com/usa-en/product-RP73D1J13RBTDG.html?te_bu=Cor&te_type=disp&te_campaign=seda_glo_cor-seda-global-disp-prtnr-fy19-seda-model-bom-cta_sma-317_1&elqCampaignId=32493"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=NetIC1_1 Pin=IC1-1
+Added Pin To Net: NetName=NetIC1_2 Pin=IC1-2
+Added Pin To Net: NetName=NetIC1_3 Pin=IC1-3
+Added Pin To Net: NetName=NetC1_1 Pin=IC1-5
+Added Pin To Net: NetName=NetC1_2 Pin=IC1-6
+Added Pin To Net: NetName=GND Pin=PIN_GND2-1
+Added Pin To Net: NetName=GND Pin=PIN_GND-1
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Pin To Net: NetName=NetC1_2 Pin=Q1-2
+Added Pin To Net: NetName=NetC1_2 Pin=Q1-3
+Added Pin To Net: NetName=NetIC1_1 Pin=Q1-4
+Added Pin To Net: NetName=NetIC1_3 Pin=Q1-5
+Added Pin To Net: NetName=GND Pin=Q1-6
+Added Pin To Net: NetName=GND Pin=Q1-7
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-8
+Added Pin To Net: NetName=NetC1_1 Pin=R22-1
+Added Pin To Net: NetName=NetC2_1 Pin=R22-2
+Added Pin To Net: NetName=GND Pin=R23-1
+Added Pin To Net: NetName=NetIC1_2 Pin=R23-2
+Added Pin To Net: NetName=NetPIN_BAT2_1 Pin=PIN_BAT2-1
+Added Pin To Net: NetName=NetPIN_BAT2_1 Pin=U2-5
+Added Net: Name=NetPIN_BAT2_1
+Added Pin To Net: NetName=NetPIN_BAT_1 Pin=PIN_BAT-1
+Added Pin To Net: NetName=NetPIN_BAT_1 Pin=U1-5
+Added Net: Name=NetPIN_BAT_1
+Added Member To Class: ClassName=proteccionBat Member=Component C1 100nF
+Added Member To Class: ClassName=proteccionBat Member=Component C2 10uF
+Added Member To Class: ClassName=proteccionBat Member=Component IC1 DW01A
+Added Member To Class: ClassName=schematicCharger Member=Component PIN_BAT2 Plug
+Added Member To Class: ClassName=schematicCharger Member=Component PIN_BAT Plug
+Added Member To Class: ClassName=schematicCharger Member=Component PIN_GND2 Plug
+Added Member To Class: ClassName=schematicCharger Member=Component PIN_GND Plug
+Added Member To Class: ClassName=proteccionBat Member=Component Q1 FS8205A
+Added Member To Class: ClassName=proteccionBat Member=Component R22 100
+Added Member To Class: ClassName=proteccionBat Member=Component R23 1k
+Added Room: Name=proteccionBat
+Added Room: Name=schematicCharger

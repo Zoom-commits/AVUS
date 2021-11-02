@@ -1,0 +1,11 @@
+Added Component: Designator=J(GCT_USB3075-30-A)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "2073-USB3075-30-ACT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/gct/USB3075-30-A/2073-USB3075-30-ACT-ND/9859705?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Global Connector Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "USB3075-30-A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/USB3075-30-A/Global%20Connector%20Technology/view-part/229370/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD1_G_2 Pin=J-1
+Added Pin To Net: NetName=GND Pin=J-5
+Added Member To Class: ClassName=schematicCharger Member=Component J USB3075-30-A
