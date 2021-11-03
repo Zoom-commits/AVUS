@@ -1,7 +1,6 @@
 // Fill-in information from your Blynk Template here
-#define BLYNK_TEMPLATE_ID "TMPLj_1jUVCs"
-#define BLYNK_DEVICE_NAME "AVUSITO"
-
+#define BLYNK_TEMPLATE_ID "TMPLnODE-7aR"
+#define BLYNK_DEVICE_NAME "Pavov500"
 #define BLYNK_FIRMWARE_VERSION        "0.1.0"
 
 #define BLYNK_PRINT Serial
@@ -124,6 +123,7 @@ void setup(){
       return;         // se sale del setup() para finalizar el programa
     }else{
        Serial.println("Sirvio esta chimbada");
+       audio.connecttohost("http://mp3.ffh.de/radioffh/hqlivestream.aac");
     }
 
   // ------ I2S audio set up --------

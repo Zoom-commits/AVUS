@@ -29,7 +29,7 @@ struct Received_data {
 int ch1_value = 0;
 Received_data received_data;
 
-int melodyPin = 3;
+int melodyPin = 7;
 
 void setup(){
 // slow clock down to 4 MHz so that it can work at 1.8 volt
@@ -38,7 +38,7 @@ void setup(){
 
 //  while (!Serial);
  received_data.ch1 = 127;
- Serial.begin(115200);
+ Serial.begin(9600);
   //Once again, begin and radio configuration
   radio.begin();
   radio.setAutoAck(false);
@@ -71,6 +71,7 @@ void receive_the_data()
 
 /**************************************************/
 void loop(){
+    sound();
   Serial.println(ch1_value);
  radio.powerUp();
 

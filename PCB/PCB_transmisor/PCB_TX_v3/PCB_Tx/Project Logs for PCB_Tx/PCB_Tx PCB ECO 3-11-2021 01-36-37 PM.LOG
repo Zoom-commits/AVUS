@@ -1,0 +1,17 @@
+Change Component Designator: OldDesignator=ESP32 NewDesignator=D1
+Change Component Designator: OldDesignator=nrf24l01 NewDesignator=nrf24l01?
+Added Component: Designator=RGB(JST_B2B-XH-A(LF)(SN))
+Add component (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/B2B-XH-A(LF)(SN)/JST%20Sales%20America%20Inc./view-part/492310/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "JST Sales"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B2B-XH-A(LF)(SN)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/B2B-XH-A(LF)(SN)/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B2B-XH-A(LF)(SN)/JST%20Sales%20America%20Inc./view-part/492310/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=RGB-2
+Added Pin To Net: NetName=NetD1_28 Pin=D1-28
+Added Pin To Net: NetName=NetD1_28 Pin=RGB-1
+Added Net: Name=NetD1_28
+Added Member To Class: ClassName=SCH_tx Member=Component RGB
