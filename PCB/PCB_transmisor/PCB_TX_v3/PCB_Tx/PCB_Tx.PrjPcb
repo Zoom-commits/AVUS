@@ -499,70 +499,58 @@ DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Keep-out.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument11]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Legend_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument12]
+[GeneratedDocument11]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Legend_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument13]
+[GeneratedDocument12]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Mechanical_1.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument14]
+[GeneratedDocument13]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Mechanical_3.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument15]
+[GeneratedDocument14]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Mechanical_10.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument16]
+[GeneratedDocument15]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Mechanical_11.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument17]
+[GeneratedDocument16]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Mechanical_12.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument18]
+[GeneratedDocument17]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Mechanical_13.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument19]
+[GeneratedDocument18]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Mechanical_15.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument20]
-DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Pads_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Pads_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument22]
+[GeneratedDocument19]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Paste_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument23]
+[GeneratedDocument20]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Paste_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument24]
+[GeneratedDocument21]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Profile.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument25]
+[GeneratedDocument22]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument26]
+[GeneratedDocument23]
 DocumentPath=Project Outputs for PCB_Tx\GerberX2\PCB_Tx_Soldermask_Top.gbr
 DItemRevisionGUID=
 
