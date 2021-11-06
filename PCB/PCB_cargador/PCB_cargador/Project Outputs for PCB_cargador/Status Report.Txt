@@ -1,12 +1,24 @@
-Output: NC Drill Files
-Type  : NC Drill
-From  : PCB Document [PCB_V2.PcbDoc]
-   Generated File[PCB_V2.TXT]
-   Generated File[PCB_V2.LDP]
-   Generated File[PCB_V2.DRR]
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : PCB Document [PCB_V3.PcbDoc]
+   Generated File[PCB_V3_Copper_Signal_Top.gbr]
+   Generated File[PCB_V3_Copper_Signal_Bot.gbr]
+   Generated File[PCB_V3_Legend_Bot.gbr]
+   Generated File[PCB_V3_Soldermask_Bot.gbr]
+   Generated File[PCB_V3_Paste_Bot.gbr]
+   Generated File[PCB_V3_Legend_Top.gbr]
+   Generated File[PCB_V3_Paste_Top.gbr]
+   Generated File[PCB_V3_Soldermask_Top.gbr]
+   Generated File[PCB_V3_Mechanical_13.gbr]
+   Generated File[PCB_V3_Mechanical_1.gbr]
+   Generated File[PCB_V3_Mechanical_15.gbr]
+   Generated File[PCB_V3_Profile.gbr]
+   Generated File[PCB_V3.RUL]
+   Generated File[PCB_V3.EXTREP]
+   Generated File[PCB_V3.REP]
 
 
-Files Generated   : 3
+Files Generated   : 15
 Documents Printed : 0
 
-Finished Output Generation At 03:48:14 PM On 5/11/2021
+Finished Output Generation At 08:21:40 PM On 5/11/2021
