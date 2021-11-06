@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: PCB2.GBR   5/11/2021  08:36:32 PM
+Gerber File Extension Report For: PCB6.GBR   5/11/2021  08:31:33 PM
 ------------------------------------------------------------------------------------------
 
 
@@ -15,7 +15,9 @@ Layer Extension     Layer Description
 .gbr                Top Paste                               
 .gbr                Top Solder                              
 .gbr                Mechanical 13                           
+.gbr                Mechanical 10                           
 .gbr                Mechanical 1                            
+.gbr                Mechanical 12                           
 .gbr                Mechanical 15                           
 .gbr                Profile                                 
 ------------------------------------------------------------------------------------------
