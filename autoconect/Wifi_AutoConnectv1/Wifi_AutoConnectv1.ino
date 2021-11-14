@@ -106,6 +106,7 @@ ESP32Time rtc;
 //************* TRANSMISIÓN **********************************************//
 byte address[6] = RX_ADDRESS;
 RF24 radio(4,5);
+const uint64_t my_radio_pipe = 0xE8E8F0F0E1LL;
 // The sizeof this struct should not exceed 32 bytes
 struct Data_to_be_sent {
   byte ch1; 
@@ -118,7 +119,7 @@ bool approve1 = true;
 bool approve2 = true;
 
 //************* Libreria y definición LEDs RGB *************************//
-#include  <Adafruit_NeoPixel.h> 
+ #include  <Adafruit_NeoPixel.h> 
 #define   PIN 17          //Pin GPIO
 #define   NUMPIXELS  8    //# de pixeles en la cinta led RGB
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
@@ -129,7 +130,7 @@ const int llaves = 22;
  */
 void setup() {
   delay(1000);
-  Serial.begin(115200);
+  Serial.begin(9600);
   Serial.println();
   
 //************* Configuración de AutoConnect WiFi *************************//
@@ -163,8 +164,9 @@ void setup() {
     SPIMonda.begin(HSPI_SCLK, HSPI_MISO, HSPI_MOSI);
     radio.begin();
     radio.setAutoAck(false);
-    radio.setDataRate(RF24_250KBPS);
+  //  radio.setDataRate(RF24_250KBPS);
     radio.openWritingPipe(address);  
+      radio.openWritingPipe(my_radio_pipe);  
     sent_data.ch1 = 123;
 
 //************* SD CARD CONFIGURATION ***********************// 
@@ -255,6 +257,8 @@ void loop() {
         Serial.println("Event has been Triggered");
         //audio.loop();
         //delay(1000);
+        llavesitas();
+        state=32;
       
   }
 }
@@ -318,7 +322,7 @@ void llavesitas2(){
    humi = i;
    audio.connecttoFS(SD,"/Device2.mp3");         
    WiFi_SendData(); // envío de dato
-
+   
    Serial.println("data Send to google Sheet");
    Serial.print("...");
    Serial.println("The data was storaged in Sheets");

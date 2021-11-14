@@ -71,46 +71,46 @@ void receive_the_data()
 
 /**************************************************/
 void loop(){
-    sound();
+    //sound();
   Serial.println(ch1_value);
- radio.powerUp();
+ //radio.powerUp();
 
-        for(int i=0;i<1000;i++){
-          delay(1);
-        
-        if (radio.available()) {
+//        for(int i=0;i<1000;i++){
+//          delay(1);
+//        
+       if (radio.available()) {
                         receive_the_data();
-                
-                  
+//                
+//                  
                   ch1_value = received_data.ch1;
-                    //  radio.printDetails();
+//                    //  radio.printDetails();
                       Serial.println(ch1_value);
-                //        radio.read(&text, sizeof(text));      
-                
-                    i=i+1;
-                
-                    if (i>59){i=0;j=j+1;}
-                
-                   
-                    if(ch1_value==94){
-                      sound();
-                       radio.powerDown ();
-                    //for(int ti=0;ti<4;ti++) {  //upto 5*8 this works OK
-//                     Serial.println("a mimir");
-                    LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF); 
-                      Serial.println("recibido se mimio");
-                    //}
-                    }
-                    radio.powerUp();
-                    radio.startListening(); 
-                    ch1_value=0;                   
-      }}
-      if(!radio.available()){
-         radio.powerDown ();
-         Serial.println("en 4s mimir");
-         LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF);
-          radio.powerUp(); 
-          radio.startListening();  
+//                //        radio.read(&text, sizeof(text));      
+//                
+//                    i=i+1;
+//                
+//                    if (i>59){i=0;j=j+1;}
+//                
+//                   
+//                    if(ch1_value==94){
+//                      sound();
+//                       radio.powerDown ();
+//                    //for(int ti=0;ti<4;ti++) {  //upto 5*8 this works OK
+////                     Serial.println("a mimir");
+//                    LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF); 
+//                      Serial.println("recibido se mimio");
+//                    //}
+//                    }
+//                    radio.powerUp();
+//                    radio.startListening(); 
+//                    ch1_value=0;                   
+//      }}
+//      if(!radio.available()){
+//         radio.powerDown ();
+//         Serial.println("en 4s mimir");
+//         LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF);
+//          radio.powerUp(); 
+//          radio.startListening();  
         }
         
 }
