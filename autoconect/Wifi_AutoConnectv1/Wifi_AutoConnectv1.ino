@@ -371,7 +371,6 @@ void WiFi_SendData() {
 }
 
 void logSDCard() {
-  
   dataMessage =  String(dayStamp) + "," + String(timeStamp) + "," + 
                 String(Temperature) + "," + String(Humidity)+ "\r\n";
   Serial.print("Save data: ");
