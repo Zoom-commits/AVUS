@@ -1,0 +1,10 @@
+Added Component: Designator=LS5(XDCR_PS1240P02BT)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "PS1240P02BT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2020 TDK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/PS1240P02BT/TDK/view-part/53420/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3v3 Pin=LS5-1
+Added Pin To Net: NetName=NetLS5_2 Pin=LS5-2
