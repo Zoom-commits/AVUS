@@ -118,18 +118,23 @@ bool approve1 = true;
 bool approve2 = true;
 
 //************* Libreria y definición LEDs RGB *************************//
- #include  <Adafruit_NeoPixel.h> 
+#include  <Adafruit_NeoPixel.h> 
 #define   PIN 17          //Pin GPIO
 #define   NUMPIXELS  8    //# de pixeles en la cinta led RGB
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 const int llaves = 22;
-int state;
 /*
  * SET UP START
  */
+
+ float Temperature=3.14;
+float Humidity=4.85;
+String formattedDate="hola";
+String dayStamp="prueba";
+String timeStamp="despues de hoy";
+String dataMessage;
 void setup() {
-  
   delay(1000);
   Serial.begin(115200);
   Serial.println();
@@ -162,7 +167,7 @@ void setup() {
 //************* NRF24 CONFIGURATION *************************// 
     SPI.begin(VSPI_SCLK, VSPI_MISO, VSPI_MOSI);
     
-   
+    SPIMonda.begin(HSPI_SCLK, HSPI_MISO, HSPI_MOSI);
     radio.begin();
     radio.setAutoAck(false);
     radio.setDataRate(RF24_250KBPS);
@@ -170,7 +175,6 @@ void setup() {
     sent_data.ch1 = 123;
 
 //************* SD CARD CONFIGURATION ***********************// 
- SPIMonda.begin(HSPI_SCLK, HSPI_MISO, HSPI_MOSI);
     pinMode(HSPI_SS, OUTPUT);      digitalWrite(HSPI_SS, HIGH);
     SD.begin(HSPI_SS);
     if (!SD.begin(HSPI_SS)) {     // inicializacion de tarjeta SD
@@ -237,10 +241,9 @@ void loop() {
  } else if (rtc.getHour(true) == 19 && rtc.getMinute()>10){
     approve2=true;
  }
-   
- if (Serial.available() > 0) {
-  state=Serial.read();
- }
+ 
+  int state=Serial.read();
+  //Serial.println(state);
 //  delay(1000);
   if(state==49){
     Serial.println("Prueba de activación");
@@ -260,8 +263,10 @@ void loop() {
         //audio.loop();
         //delay(1000);
         llavesitas();
-        state=32;
-      
+      state=4;
+  }
+  if(state==50){
+     llavesitas2();
   }
 }
 void llavesitas(){
@@ -285,13 +290,13 @@ void llavesitas(){
    Serial.println("The data was storaged in Sheets");
 
 //************* SD CARD STORAGE ***********************// 
-   archivo = SD.open("/datalog.csv", FILE_WRITE);  
+   archivo = SD.open("datalog.csv", FILE_WRITE);  
 
    if (archivo) {
+    archivo.println("");
       archivo.print("\n Juanito tqm");  // escritura de una linea de texto en archivo
       archivo.print(" ,"); 
-      archivo.print("x5 tqm"); 
-      archivo.println("ffff");
+      archivo.println("x5 tqm \n "); 
       archivo.close();        // cierre del archivo
       Serial.println("escritura correcta"); // texto de escritura correcta en monitor serie
   } else {
@@ -330,29 +335,8 @@ void llavesitas2(){
    Serial.println("The data was storaged in Sheets");
 
 //************* SD CARD STORAGE ***********************// 
-   archivo = SD.open("/datalog.csv", FILE_WRITE);  
+logSDCard();
 
-   if (archivo) {
-      archivo.print("\n cris tqm");  // escritura de una linea de texto en archivo
-      archivo.print(" ,"); 
-      archivo.print("x5 tqm"); 
-      archivo.println("ffff");
-      archivo.close();        // cierre del archivo
-      Serial.println("escritura correcta"); // texto de escritura correcta en monitor serie
-  } else {
-      Serial.println("error en apertura de prueba.txt");  // texto de falla en apertura de archivo
-  }
-
-  archivo = SD.open("/datalog.csv");    // apertura de archivo prueba.txt
-  if (archivo) {
-    Serial.println("Contenido de prueba.txt:"); // texto en monitor serie
-    while (archivo.available()) {   // mientras exista contenido en el archivo
-      Serial.write(archivo.read());     // lectura de a un caracter por vez
-    }
-    archivo.close();        // cierre de archivo
-  } else {
-    Serial.println("error en la apertura de prueba.txt");// texto de falla en apertura de archivo
-  }
 }
 
 //************* IFTTT data sending function ***********************// 
@@ -384,4 +368,42 @@ void WiFi_SendData() {
     content_length_here[1] = '0' + (compi % 10);
     client.print(post_rqst);
   }
+}
+
+void logSDCard() {
+  dataMessage =  String(dayStamp) + "," + String(timeStamp) + "," + 
+                String(Temperature) + "," + String(Humidity)+ "\r\n";
+  Serial.print("Save data: ");
+  Serial.println(dataMessage);
+  appendFile(SD, "/data.csv", dataMessage.c_str());
+}
+// Write to the SD card (DON'T MODIFY THIS FUNCTION)
+void writeFile(fs::FS &fs, const char * path, const char * message) {
+  Serial.printf("Writing file: %s\n", path);
+  File file = fs.open(path, FILE_WRITE);
+  if(!file) {
+    Serial.println("Failed to open file for writing");
+    return;
+  }
+  if(file.print(message)) {
+    Serial.println("File written");
+  } else {
+    Serial.println("Write failed");
+  }
+  file.close();
+}
+// Append data to the SD card (DON'T MODIFY THIS FUNCTION)
+void appendFile(fs::FS &fs, const char * path, const char * message) {
+  Serial.printf("Appending to file: %s\n", path);
+  File file = fs.open(path, FILE_APPEND);
+  if(!file) {
+    Serial.println("Failed to open file for appending");
+    return;
+  }
+  if(file.print(message)) {
+    Serial.println("Message appended");
+  } else {
+    Serial.println("Append failed");
+  }
+  file.close();
 }
