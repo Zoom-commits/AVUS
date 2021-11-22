@@ -106,7 +106,6 @@ ESP32Time rtc;
 //************* TRANSMISIÓN **********************************************//
 byte address[6] = RX_ADDRESS;
 RF24 radio(4,5);
-const uint64_t my_radio_pipe = 0xE8E8F0F0E1LL;
 // The sizeof this struct should not exceed 32 bytes
 struct Data_to_be_sent {
   byte ch1; 
@@ -125,12 +124,14 @@ bool approve2 = true;
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 const int llaves = 22;
+int state;
 /*
  * SET UP START
  */
 void setup() {
+  
   delay(1000);
-  Serial.begin(9600);
+  Serial.begin(115200);
   Serial.println();
   
 //************* Configuración de AutoConnect WiFi *************************//
@@ -161,15 +162,15 @@ void setup() {
 //************* NRF24 CONFIGURATION *************************// 
     SPI.begin(VSPI_SCLK, VSPI_MISO, VSPI_MOSI);
     
-    SPIMonda.begin(HSPI_SCLK, HSPI_MISO, HSPI_MOSI);
+   
     radio.begin();
     radio.setAutoAck(false);
-  //  radio.setDataRate(RF24_250KBPS);
+    radio.setDataRate(RF24_250KBPS);
     radio.openWritingPipe(address);  
-      radio.openWritingPipe(my_radio_pipe);  
     sent_data.ch1 = 123;
 
 //************* SD CARD CONFIGURATION ***********************// 
+ SPIMonda.begin(HSPI_SCLK, HSPI_MISO, HSPI_MOSI);
     pinMode(HSPI_SS, OUTPUT);      digitalWrite(HSPI_SS, HIGH);
     SD.begin(HSPI_SS);
     if (!SD.begin(HSPI_SS)) {     // inicializacion de tarjeta SD
@@ -236,9 +237,10 @@ void loop() {
  } else if (rtc.getHour(true) == 19 && rtc.getMinute()>10){
     approve2=true;
  }
- 
-  int state=Serial.read();
-  Serial.println(state);
+   
+ if (Serial.available() > 0) {
+  state=Serial.read();
+ }
 //  delay(1000);
   if(state==49){
     Serial.println("Prueba de activación");
@@ -322,7 +324,7 @@ void llavesitas2(){
    humi = i;
    audio.connecttoFS(SD,"/Device2.mp3");         
    WiFi_SendData(); // envío de dato
-   
+
    Serial.println("data Send to google Sheet");
    Serial.print("...");
    Serial.println("The data was storaged in Sheets");

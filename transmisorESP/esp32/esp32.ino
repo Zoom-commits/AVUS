@@ -1,19 +1,15 @@
-// Fill-in information from your Blynk Template here
-#define BLYNK_TEMPLATE_ID "TMPLnODE-7aR"
-#define BLYNK_DEVICE_NAME "Pavov500"
-#define BLYNK_FIRMWARE_VERSION        "0.1.0"
 
-#define BLYNK_PRINT Serial
-//#define BLYNK_DEBUG
-
-#define APP_DEBUG
 
 // Uncomment your board, or configure a custom board in Settings.h
 //#define USE_WROVER_BOARD
 //#define USE_TTGO_T7
 
-#include "BlynkEdgent.h"
 
+//************ LIBRERIAS DE WIFI ***************************************//
+#include <WiFi.h>
+#include <WebServer.h>
+#include <time.h>
+#include <AutoConnect.h>
 // Includes 
 #include <NTPClient.h>
 #include <ESP32Time.h>
@@ -50,8 +46,38 @@ File archivo;     // objeto archivo del tipo File
 #define uS_TO_S_FACTOR 1000000 //Conversion factor for micro to seconds
 #define TIME_TO_SLEEP 60       //Time EPS32 will go to sleep (in seconds)
 
-Audio audio;
-WiFiClient client;
+WebServer         Server;
+AutoConnect       Portal(Server);
+AutoConnectConfig Config;       // Enable autoReconnect supported on v0.9.4
+Audio             audio;
+WiFiClient        client;
+//************* Pagina HTML para configurar el WiFi **********************//
+void rootPage() {
+  String  content =
+    "<html>"
+    "<head>"
+    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+    "<script type=\"text/javascript\">"
+    "setTimeout(\"location.reload()\", 1000);"
+    "</script>"
+    "</head>"
+    "<body>"
+    "<h2 align=\"center\" style=\"color:blue;margin:20px;\">Bienvenido a AVUS!</h2>"
+    "<p style=\"text-align:center;\">Por favor presione el boton de abajo para configurar el WiFi del dispositivo.</p>"
+    "<p></p><p style=\"padding-top:20px;text-align:center\">" AUTOCONNECT_LINK(COG_24) "</p>"
+    "</body>"
+    "</html>";
+
+  Server.send(200, "text/html", content);
+}
+void startPage() {
+  // The /start page just constitutes timezone,
+  // it redirects to the root page without the content response.
+  Server.sendHeader("Location", String("http://") + Server.client().localIP().toString() + String("/"));
+  Server.send(302, "text/plain", "");
+  Server.client().flush();
+  Server.client().stop();
+}
 // -------- IFTTT ------------------
 #define key "dcd50PRWdVFAnMTFbBRKRU"; 
 #define Event "ESP32_data";
@@ -96,14 +122,39 @@ bool approve2 = true;
 // ------- Control and IRQ ------------------
 char estado = 1;
 const uint8_t Device1 =34;
-
+int entrada;
 // ------- Start set up -------------
 
 const int llaves = 22;
+const int llaves2 = 17;
 
 void setup(){
   // ------ WiFi set up ------------
-    BlynkEdgent.begin();
+   //************* Configuración de AutoConnect WiFi *************************//
+    Config.homeUri="/_ac";
+    Config.apid = "AVUS";
+    Config.psk  = "tesisAvus";
+    Config.apip=IPAddress(10,1,1,1);
+    //Config.immediateStart = true;
+    Config.hostName = "Avus_Wifi";
+    Config.title = "AVUS";
+    Config.autoSave = AC_SAVECREDENTIAL_AUTO;
+    Config.autoReset = false;
+    Config.autoReconnect = true;  
+    Config.reconnectInterval = 6; 
+    Config.autoRise = true;
+    Config.retainPortal = true; 
+  Portal.config(Config);
+  
+//************* Servidor web de configuración *************************//
+  Server.on("/", rootPage);
+  Server.on("/start", startPage);   // Set NTP server trigger handler
+
+// Establish a connection with an autoReconnect option.
+  if (Portal.begin()) {
+    Serial.println("WiFi connected: " + WiFi.localIP().toString());
+    Serial.println(WiFi.getHostname());
+  }
 
   // ------ NRF24L01 ----------------
     SPI.begin(VSPI_SCLK, VSPI_MISO, VSPI_MOSI);
@@ -123,7 +174,7 @@ void setup(){
       return;         // se sale del setup() para finalizar el programa
     }else{
        Serial.println("Sirvio esta chimbada");
-       audio.connecttohost("http://mp3.ffh.de/radioffh/hqlivestream.aac");
+       //audio.connecttohost("http://mp3.ffh.de/radioffh/hqlivestream.aac");
     }
 
   // ------ I2S audio set up --------
@@ -144,10 +195,12 @@ void setup(){
 ////     pinMode(Device2,INPUT_PULLUP);
 ////     attachInterrupt(Device2,Device_2,FALLING);
     pinMode(llaves, INPUT);  
+    pinMode(llaves2, INPUT);  
 }
 
 void loop() {
-  BlynkEdgent.run();
+ // BlynkEdgent.run();
+   Portal.handleClient();
   audio.loop();
   delay(10);
     
@@ -183,18 +236,29 @@ void loop() {
                 approve2=true;
               }
   // ----------- END NTP server ------------
- //radio.write(&sent_data, sizeof(Data_to_be_sent));
- //Serial.println(sent_data.ch1);
-   if(digitalRead(llaves)){
+//  if (Serial.available() > 0) {
+//    // read the incoming byte:
+//    entrada = Serial.read();
+//
+//    // say what you got:
+//    Serial.print("I received: ");
+//
+//  }
+
+   if(digitalRead(llaves)==HIGH){
+    entrada=2;
       llavesitas();
-      
+     }
+     if(digitalRead(llaves2)==HIGH){
+      llavesitas2();
+      entrada=2;
      }
 }
 void llavesitas(){
   //audio.connecttoFS(SD,"/quenospaso.mp3");
   Serial.println("funcion OK");
    sent_data.ch1 = 94;
-  for(int y=0;y<5000;y++){
+  for(int y=0;y<100;y++){
     radio.write(&sent_data, sizeof(Data_to_be_sent));
     delay(1);
       Serial.println(sent_data.ch1);
@@ -240,65 +304,115 @@ archivo = SD.open("/datalog.csv", FILE_WRITE);
   }
 }
 
-BLYNK_WRITE(V0){
-  
-  Serial.println(sent_data.ch1);
-  int state=param.asInt();
-  if(state==1){
-    Serial.println("Prueba de activación");
-    
-      i = (random(0, 100));
+
+void llavesitas2(){
+  //audio.connecttoFS(SD,"/quenospaso.mp3");
+  Serial.println("funcion OK");
+   sent_data.ch1 = 23;
+  for(int y=0;y<100;y++){
+    radio.write(&sent_data, sizeof(Data_to_be_sent));
+    delay(1);
+      Serial.println(sent_data.ch1);
+    }
+     i = (random(0, 100));
         temp = i; 
         i = (random(90, 200));
         humi = i;
-    audio.connecttoFS(SD,"/Device1.mp3");
-    WiFi_SendData();
+    audio.connecttoFS(SD,"/Device2.mp3");
+            
+      WiFi_SendData();
 
         Serial.println("data Send to google Sheet");
         Serial.print(temp);
         Serial.print("  ");
         Serial.println(humi);
         Serial.println("Event has been Triggered");
-        audio.loop();
-        //delay(1000);   
-  }
-  sent_data.ch1 = 24;
-  for(int y=0;y<1000;y++){
-    radio.write(&sent_data, sizeof(Data_to_be_sent));
-    delay(1);
-  }
-   archivo = SD.open("/prueba.txt", FILE_WRITE);  // apertura para lectura/escritura de archivo prueba.txt
-        archivo.println("wifi ok");  // escritura de una linea de texto en archivo
-        Serial.println("Escribiendo en archivo prueba.txt..."); // texto en monitor serie
-        archivo.close();            
-}
-
-
-BLYNK_WRITE(V1){
-  sent_data.ch1 = 192;
-  radio.write(&sent_data, sizeof(Data_to_be_sent));
-  Serial.println(sent_data.ch1);
-  int state=param.asInt();
-  if(state==1){
-    Serial.println("Prueba de activación botón 2");
+//       
+//        
+archivo = SD.open("/datalog.csv", FILE_WRITE);  
+//
+        if (archivo) {
+    archivo.print("\n Juanito tqm");  // escritura de una linea de texto en archivo
+    archivo.print(" ,"); 
+    archivo.print("x2 tqm"); 
+    archivo.println("ffff");
     
-//      i = (random(0, 100));
-        temp = "Receptor 2";
-        i = (random(90, 200));
-        humi = i;
-        
-        audio.connecttoFS(SD,"/Device2.mp3");
-        WiFi_SendData();
+    archivo.close();        // cierre del archivo
+    Serial.println("escritura correcta"); // texto de escritura correcta en monitor serie
+  } else {
+    Serial.println("error en apertura de prueba.txt");  // texto de falla en apertura de archivo
+  }
 
-        Serial.println("data Send to google Sheet");
-        Serial.print(temp);
-        Serial.print("  ");
-        Serial.println(humi);
-        Serial.println("Event has been Triggered");
-        audio.loop();
-        //delay(1000);
+  archivo = SD.open("/datalog.csv");    // apertura de archivo prueba.txt
+  if (archivo) {
+    Serial.println("Contenido de prueba.txt:"); // texto en monitor serie
+    while (archivo.available()) {   // mientras exista contenido en el archivo
+      Serial.write(archivo.read());     // lectura de a un caracter por vez
+    }
+    archivo.close();        // cierre de archivo
+  } else {
+    Serial.println("error en la apertura de prueba.txt");// texto de falla en apertura de archivo
   }
 }
+//BLYNK_WRITE(V0){
+//  
+//  Serial.println(sent_data.ch1);
+//  int state=param.asInt();
+//  if(state==1){
+//    Serial.println("Prueba de activación");
+//    
+//      i = (random(0, 100));
+//        temp = i; 
+//        i = (random(90, 200));
+//        humi = i;
+//    audio.connecttoFS(SD,"/Device1.mp3");
+//    WiFi_SendData();
+//
+//        Serial.println("data Send to google Sheet");
+//        Serial.print(temp);
+//        Serial.print("  ");
+//        Serial.println(humi);
+//        Serial.println("Event has been Triggered");
+//        audio.loop();
+//        //delay(1000);   
+//  }
+//  sent_data.ch1 = 24;
+//  for(int y=0;y<1000;y++){
+//    radio.write(&sent_data, sizeof(Data_to_be_sent));
+//    delay(1);
+//  }
+//   archivo = SD.open("/prueba.txt", FILE_WRITE);  // apertura para lectura/escritura de archivo prueba.txt
+//        archivo.println("wifi ok");  // escritura de una linea de texto en archivo
+//        Serial.println("Escribiendo en archivo prueba.txt..."); // texto en monitor serie
+//        archivo.close();            
+//}
+//
+
+//BLYNK_WRITE(V1){
+//  sent_data.ch1 = 192;
+//  radio.write(&sent_data, sizeof(Data_to_be_sent));
+//  Serial.println(sent_data.ch1);
+//  int state=param.asInt();
+//  if(state==1){
+//    Serial.println("Prueba de activación botón 2");
+//    
+////      i = (random(0, 100));
+//        temp = "Receptor 2";
+//        i = (random(90, 200));
+//        humi = i;
+//        
+//        audio.connecttoFS(SD,"/Device2.mp3");
+//        WiFi_SendData();
+//
+//        Serial.println("data Send to google Sheet");
+//        Serial.print(temp);
+//        Serial.print("  ");
+//        Serial.println(humi);
+//        Serial.println("Event has been Triggered");
+//        audio.loop();
+//        //delay(1000);
+//  }
+//}
 //void Device_2(){
 //   Serial.println("Prueba de activación por IRQ pin 34");
 //    

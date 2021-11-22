@@ -1,7 +1,6 @@
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
-#include "printf.h"
 #include "pitches.h"
 
 
@@ -14,7 +13,7 @@
 
 
 
-RF24 radio(9,10 );
+RF24 radio(9,10);
 
 const byte rxAddr[6] = RX_ADDRESS;
 
@@ -34,11 +33,11 @@ int melodyPin = 7;
 void setup(){
 // slow clock down to 4 MHz so that it can work at 1.8 volt
 //clock_prescale_set (clock_div_2);
-
+Serial.begin(9600);
 
 //  while (!Serial);
  received_data.ch1 = 127;
- Serial.begin(9600);
+ 
   //Once again, begin and radio configuration
   radio.begin();
   radio.setAutoAck(false);
@@ -72,19 +71,22 @@ void receive_the_data()
 /**************************************************/
 void loop(){
     //sound();
+    receive_the_data();
+
+  
+  ch1_value = received_data.ch1;
   Serial.println(ch1_value);
  //radio.powerUp();
-
 //        for(int i=0;i<1000;i++){
 //          delay(1);
 //        
-       if (radio.available()) {
-                        receive_the_data();
+//    if (radio.available()) {
+//                        receive_the_data();
 //                
 //                  
-                  ch1_value = received_data.ch1;
+//             ch1_value = received_data.ch1;
 //                    //  radio.printDetails();
-                      Serial.println(ch1_value);
+//               Serial.println(ch1_value);
 //                //        radio.read(&text, sizeof(text));      
 //                
 //                    i=i+1;
@@ -111,7 +113,7 @@ void loop(){
 //         LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF);
 //          radio.powerUp(); 
 //          radio.startListening();  
-        }
+//     }
         
 }
 
