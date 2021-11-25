@@ -3,58 +3,47 @@
 #include <RF24.h>
 #include "pitches.h"
 
-
-
-#include <avr/sleep.h>
-#include "LowPower.h"  //8 sec timer to use
-#include <avr/power.h>
-
 #define RX_ADDRESS "AVUS"
+#define TX_ADDRESS "AVUZ"
+byte address[6] = RX_ADDRESS;
+byte addressb[6] = TX_ADDRESS;
+RF24 radio(9, 10);  //CSN and CE pins
 
-
-
-RF24 radio(9,10);
-
-const byte rxAddr[6] = RX_ADDRESS;
-
-int i=0;
-int j=0;
-
+// The sizeof this struct should not exceed 32 bytes
 struct Received_data {
   byte ch1;
-  
 };
-
 int ch1_value = 0;
 Received_data received_data;
-
+//************* TRANSMISIÓN **********************************************//
+struct Data_to_be_sent {
+  byte ch2; 
+};
+Data_to_be_sent sent_data;
+int ReadVoltage ; 
+int up=0;
+int down=0;
+/**************************************************/
 int melodyPin = 7;
+const int PinSalir = 8; 
 
-void setup(){
-// slow clock down to 4 MHz so that it can work at 1.8 volt
-//clock_prescale_set (clock_div_2);
-Serial.begin(9600);
-
-//  while (!Serial);
- received_data.ch1 = 127;
- 
+void setup()
+{
+  pinMode(PinSalir, INPUT);
+  Serial.begin(9600);
+  //We reset the received values
+  received_data.ch1 = 124;
+ sent_data.ch2 = 223;
   //Once again, begin and radio configuration
   radio.begin();
   radio.setAutoAck(false);
-  //radio.setRetries(0,15)
-  radio.setDataRate(RF24_250KBPS);
-  radio.openReadingPipe(1,rxAddr);
-  
+  radio.setDataRate(RF24_250KBPS);  
+  radio.openReadingPipe(1,address);
+  radio.openWritingPipe(addressb);  
   //We start the radio comunication
   radio.startListening();
-
- Serial.println("Recibiendo");
-
- 
-
 }
 
-char text[2] = {0};
 /**************************************************/
 
 unsigned long last_Time = 0;
@@ -69,53 +58,66 @@ void receive_the_data()
 }
 
 /**************************************************/
-void loop(){
-    //sound();
-    receive_the_data();
 
+int estado=1;
+void loop()
+{
+  if(digitalRead(PinSalir)==LOW){
+Serial.println("LOW");
+ }
+ 
+  switch(estado){
+    case 1:
+        //Receive the radio data
+        receive_the_data();
+        ch1_value = received_data.ch1;
+       // Serial.println(ch1_value);
+        if(ch1_value==94){
+          sing();
+          received_data.ch1=33;
+        }
+         if(ch1_value==150){
+          sound();
+          received_data.ch1=33;
+        }
+        estado=2;
+     break;
+     case 2:
+          ReadVoltage = analogRead(A0);
+          if(ReadVoltage<=100&&down==0){
+            radio.stopListening();
+            sent_data.ch2 = 10;
+             for(int y=0;y<100;y++){
+                radio.write(&sent_data, sizeof(Data_to_be_sent));
+                 Serial.println(sent_data.ch2);
+                delay(1);
+             }
+           Serial.println("down"); 
+           down=1;
+           up=0;
+           radio.startListening();
+          }
+          if(ReadVoltage>=900&&up==0){
+            sent_data.ch2 = 20;
+            radio.stopListening();
+             for(int y=0;y<100;y++){
+                radio.write(&sent_data, sizeof(Data_to_be_sent));
+                 Serial.println(sent_data.ch2);
+                delay(1);
+             }
+           Serial.println("up"); 
+           down=0;
+           up=1;
+           radio.startListening();
+          }
   
-  ch1_value = received_data.ch1;
-  Serial.println(ch1_value);
- radio.powerUp();
-        for(int i=0;i<1000;i++){
-          delay(1);
-        
-    if (radio.available()) {
-                        receive_the_data();
-                
-                  
-             ch1_value = received_data.ch1;
-                  radio.printDetails();
-               Serial.println(ch1_value);
-                       radio.read(&text, sizeof(text));      
-                
-                    i=i+1;
-                
-                    if (i>59){i=0;j=j+1;}
-                
-                   
-                    if(ch1_value==94){
-                      sound();
-                       radio.powerDown ();
-                    for(int ti=0;ti<4;ti++) {  //upto 5*8 this works OK
-                     Serial.println("a mimir");
-                    LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF); 
-                      Serial.println("recibido se mimio");
-                    }
-                    }
-                    radio.powerUp();
-                    radio.startListening(); 
-                    ch1_value=0;                   
-      }}
-      if(!radio.available()){
-         radio.powerDown ();
-         Serial.println("en 4s mimir");
-         LowPower.powerDown(SLEEP_4S, ADC_OFF, BOD_OFF);
-          radio.powerUp(); 
-          radio.startListening();  
-     }
-        
-}
+  estado=1;
+  break;
+  } 
+ }//Loop end
+
+
+
 
 
 void buzz(int targetPin, long frequency, long length) {
@@ -152,8 +154,11 @@ int DuracionNotas[] = {
 void sing() {
  int size = sizeof(melodyA) / sizeof(int);
   for (int thisNote = 0; thisNote < size; thisNote++) {
-
-  buzz(melodyPin, melodyA[thisNote], noteDuration[thisNote]);
+if(digitalRead(PinSalir)==LOW){
+Serial.println("LOW");
+break;
+ }
+  buzz(melodyPin, melodyA[thisNote], noteDuration[thisNote]*2);
 
     // to distinguish the notes, set a minimum time between them.
     // the note's duration + 30% seems to work well:
@@ -171,12 +176,19 @@ void sing() {
 void sound(){
   // Notas de la melodia, :
   for (int Nota = 0; Nota < 18; Nota++) {
+//   if(digitalRead(PinSalir)==LOW){
+//  Nota=19;
+//  }
 
+if(digitalRead(PinSalir)==LOW){
+Serial.println("LOW");
+break;
+ }
     // calculo de la duracin de la nota, dividimos un segundo por el tipo de nota
     
-    int Duracion = 1000 / DuracionNotas[Nota];
+    int Duracion = 2000 / DuracionNotas[Nota];
 // pin usado numero 3
-    tone(3, melody[Nota], Duracion);
+    tone(melodyPin, melody[Nota], Duracion);
 
     // para oir bien la melodia entre notas aadimos un retardo de un 40%
     
@@ -184,6 +196,16 @@ void sound(){
        delay(pausa);
     
     // Paramos la melodia
-    noTone(6);
+    noTone(melodyPin);
   }
+}
+
+//void salir(){
+//  if(digitalRead(PinSalir)==LOW){
+//  
+//  }
+//}
+void velocidadMenos()
+{
+ 
 }
