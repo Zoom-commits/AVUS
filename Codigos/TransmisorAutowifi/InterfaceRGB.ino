@@ -1,13 +1,13 @@
 //************* Libreria y definición LEDs RGB *************************//
 #include  <Adafruit_NeoPixel.h> 
-#define   PIN 22          //Pin GPIO
+#define   PIN 17          //Pin GPIO
 #define   NUMPIXELS  8    //# de pixeles en la cinta led RGB
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 void setUpRGB(){
    pixels.begin(); 
    pixels.setBrightness(34);
-   mostrarRGB(0,255,0,0);
+   mostrarRGB(0,0,255,0);
    mostrarRGB(1,255,0,0);
    mostrarRGB(2,255,0,0);
    mostrarRGB(3,255,0,0);

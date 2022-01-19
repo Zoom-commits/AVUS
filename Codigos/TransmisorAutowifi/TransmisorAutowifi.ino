@@ -35,8 +35,9 @@ void setup() {
   sdConfiguracion();
   //************* MAX I2C CONFIGURATION ***********************// 
   audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
-  audio.setVolume(15); // 0...21
-  audio.connecttoFS(SD, "/Start.mp3");
+  audio.setVolume(20); // 0...21
+      //audio.connecttohost("http://mp3.ffh.de/radioffh/hqlivestream.mp3");
+ audio.connecttoFS(SD, "/Start.mp3");
   delay(100);
   //************* INTEN RTC CONFIGURATION ***********************// 
   rtcWifi();
