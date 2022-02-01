@@ -17,15 +17,15 @@ int ch1_value = 0;
 Received_data received_data;
 //************* TRANSMISIÓN **********************************************//
 struct Data_to_be_sent {
-  byte ch2; 
+  byte ch2;
 };
 Data_to_be_sent sent_data;
-int ReadVoltage ; 
-int up=0;
-int down=0;
+int ReadVoltage ;
+int up = 0;
+int down = 0;
 /**************************************************/
 int melodyPin = 7;
-const int PinSalir = 8; 
+const int PinSalir = 8;
 
 void setup()
 {
@@ -33,13 +33,13 @@ void setup()
   Serial.begin(9600);
   //We reset the received values
   received_data.ch1 = 124;
- sent_data.ch2 = 223;
+  //sent_data.ch2 = 223;
   //Once again, begin and radio configuration
   radio.begin();
   radio.setAutoAck(false);
-  radio.setDataRate(RF24_250KBPS);  
-  radio.openReadingPipe(1,address);
-  radio.openWritingPipe(addressb);  
+  radio.setDataRate(RF24_250KBPS);
+  radio.openReadingPipe(1, address);
+  radio.openWritingPipe(addressb);
   //We start the radio comunication
   radio.startListening();
 }
@@ -52,69 +52,71 @@ unsigned long last_Time = 0;
 void receive_the_data()
 {
   while ( radio.available() ) {
-  radio.read(&received_data, sizeof(Received_data));
-  last_Time = millis(); //Here we receive the data
-}
+    radio.read(&received_data, sizeof(Received_data));
+    last_Time = millis(); //Here we receive the data
+  }
 }
 
 /**************************************************/
 
-int estado=1;
+int estado = 1;
 void loop()
 {
-  if(digitalRead(PinSalir)==LOW){
-Serial.println("LOW");
- }
- 
-  switch(estado){
+//  if (digitalRead(PinSalir) == LOW) {
+//    Serial.println("LOW");
+//  }
+
+  switch (estado) {
     case 1:
-        //Receive the radio data
-        receive_the_data();
-        ch1_value = received_data.ch1;
-       // Serial.println(ch1_value);
-        if(ch1_value==94){
-          sing();
-          received_data.ch1=33;
-        }
-         if(ch1_value==150){
-          sound();
-          received_data.ch1=33;
-        }
-        estado=2;
-     break;
-     case 2:
-          ReadVoltage = analogRead(A0);
-          if(ReadVoltage<=100&&down==0){
-            radio.stopListening();
-            sent_data.ch2 = 10;
-             for(int y=0;y<100;y++){
-                radio.write(&sent_data, sizeof(Data_to_be_sent));
-                 Serial.println(sent_data.ch2);
-                delay(1);
-             }
-           Serial.println("down"); 
-           down=1;
-           up=0;
-           radio.startListening();
-          }
-          if(ReadVoltage>=900&&up==0){
-            sent_data.ch2 = 20;
-            radio.stopListening();
-             for(int y=0;y<100;y++){
-                radio.write(&sent_data, sizeof(Data_to_be_sent));
-                 Serial.println(sent_data.ch2);
-                delay(1);
-             }
-           Serial.println("up"); 
-           down=0;
-           up=1;
-           radio.startListening();
-          }
-  
-  estado=1;
-  break;
-  } 
- }//Loop end
+      //Receive the radio data
+      receive_the_data();
+      ch1_value = received_data.ch1;
+     // Serial.println(ch1_value);
+      if (ch1_value == 94) {
+         Serial.println("AAA");
+        sing();
+        received_data.ch1 = 33;
+      }
+      if (ch1_value == 150) {
+         Serial.println("bbb");
+        sound();
+        received_data.ch1 = 33;
+      }
+      //estado = 2;
+      break;
+    case 2:
+//                ReadVoltage = analogRead(A0);
+//                if(ReadVoltage<=100&&down==0){
+//                  radio.stopListening();
+//                  sent_data.ch2 = 10;
+//                   for(int y=0;y<100;y++){
+//                      radio.write(&sent_data, sizeof(Data_to_be_sent));
+//                       Serial.println(sent_data.ch2);
+//                      delay(1);
+//                   }
+//                 Serial.println("down");
+//                 down=1;
+//                 up=0;
+//                 radio.startListening();
+//                }
+//                if(ReadVoltage>=900&&up==0){
+//                  sent_data.ch2 = 20;
+//                  radio.stopListening();
+//                   for(int y=0;y<100;y++){
+//                      radio.write(&sent_data, sizeof(Data_to_be_sent));
+//                       Serial.println(sent_data.ch2);
+//                      delay(1);
+//                   }
+//                 Serial.println("up");
+//                 down=0;
+//                 up=1;
+//                 radio.startListening();
+//                }
+
+      estado = 1;
+      break;
+  }
+}//Loop end
 
 
 
@@ -143,22 +145,22 @@ int noteDuration[] = {
 };
 
 int melody[] = {
-    NOTE_A4, NOTE_D4, NOTE_F4, NOTE_G4, NOTE_A4, NOTE_D4, NOTE_F4, NOTE_G4, NOTE_E4,
-    NOTE_G4, NOTE_C4, NOTE_F4, NOTE_E4, NOTE_G4, NOTE_C4, NOTE_F4, NOTE_E4, NOTE_D4
-   
+  NOTE_A4, NOTE_D4, NOTE_F4, NOTE_G4, NOTE_A4, NOTE_D4, NOTE_F4, NOTE_G4, NOTE_E4,
+  NOTE_G4, NOTE_C4, NOTE_F4, NOTE_E4, NOTE_G4, NOTE_C4, NOTE_F4, NOTE_E4, NOTE_D4
+
 };
 
 int DuracionNotas[] = {
   2, 2, 4, 4, 2, 2, 4, 4, 1, 2, 2, 4, 4, 2, 2, 4, 4, 1,
 };
 void sing() {
- int size = sizeof(melodyA) / sizeof(int);
+  int size = sizeof(melodyA) / sizeof(int);
   for (int thisNote = 0; thisNote < size; thisNote++) {
-if(digitalRead(PinSalir)==LOW){
-Serial.println("LOW");
-break;
- }
-  buzz(melodyPin, melodyA[thisNote], noteDuration[thisNote]*2);
+    if (digitalRead(PinSalir) == LOW) {
+      Serial.println("LOW");
+      break;
+    }
+    buzz(melodyPin, melodyA[thisNote], noteDuration[thisNote] * 2);
 
     // to distinguish the notes, set a minimum time between them.
     // the note's duration + 30% seems to work well:
@@ -173,28 +175,28 @@ break;
 }
 
 
-void sound(){
+void sound() {
   // Notas de la melodia, :
   for (int Nota = 0; Nota < 18; Nota++) {
-//   if(digitalRead(PinSalir)==LOW){
-//  Nota=19;
-//  }
+    //   if(digitalRead(PinSalir)==LOW){
+    //  Nota=19;
+    //  }
 
-if(digitalRead(PinSalir)==LOW){
-Serial.println("LOW");
-break;
- }
+    if (digitalRead(PinSalir) == LOW) {
+      Serial.println("LOW");
+      break;
+    }
     // calculo de la duracin de la nota, dividimos un segundo por el tipo de nota
-    
+
     int Duracion = 2000 / DuracionNotas[Nota];
-// pin usado numero 3
+    // pin usado numero 3
     tone(melodyPin, melody[Nota], Duracion);
 
     // para oir bien la melodia entre notas aadimos un retardo de un 40%
-    
+
     int pausa = Duracion * 1.40;
-       delay(pausa);
-    
+    delay(pausa);
+
     // Paramos la melodia
     noTone(melodyPin);
   }
@@ -202,10 +204,10 @@ break;
 
 //void salir(){
 //  if(digitalRead(PinSalir)==LOW){
-//  
+//
 //  }
 //}
 void velocidadMenos()
 {
- 
+
 }
