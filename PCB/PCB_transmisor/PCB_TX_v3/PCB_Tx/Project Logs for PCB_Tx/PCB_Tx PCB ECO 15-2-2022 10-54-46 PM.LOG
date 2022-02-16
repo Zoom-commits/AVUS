@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=C8_1uF NewDesignator=C8_0.1uF
+Change Component Designator: OldDesignator=C9_1uF NewDesignator=C9_0.1uF
+Change Component Designator: OldDesignator=R_10K NewDesignator=Ren_10K
+Change Net Name : Old Net Name=NetC8_1uF_2 New Net Name=NetC8_0.1uF_2
+Change Net Name : Old Net Name=NetC9_1uF_2 New Net Name=NetC9_0.1uF_2
+Change Net Color : Old Net Color=RGB(0, 190, 0) New Net Color=Default
+Change Net Color : Old Net Color=RGB(0, 190, 0) New Net Color=Default
+Added Member To Class: ClassName=SCH_tx Member=Component MAX MAX98357AETE+
