@@ -25,7 +25,7 @@ int up = 0;
 int down = 0;
 /**************************************************/
 int melodyPin = 7;
-const int PinSalir = 8;
+const int PinSalir = LOW;
 
 void setup()
 {
@@ -85,33 +85,33 @@ void loop()
       //estado = 2;
       break;
     case 2:
-//                ReadVoltage = analogRead(A0);
-//                if(ReadVoltage<=100&&down==0){
-//                  radio.stopListening();
-//                  sent_data.ch2 = 10;
-//                   for(int y=0;y<100;y++){
-//                      radio.write(&sent_data, sizeof(Data_to_be_sent));
-//                       Serial.println(sent_data.ch2);
-//                      delay(1);
-//                   }
-//                 Serial.println("down");
-//                 down=1;
-//                 up=0;
-//                 radio.startListening();
-//                }
-//                if(ReadVoltage>=900&&up==0){
-//                  sent_data.ch2 = 20;
-//                  radio.stopListening();
-//                   for(int y=0;y<100;y++){
-//                      radio.write(&sent_data, sizeof(Data_to_be_sent));
-//                       Serial.println(sent_data.ch2);
-//                      delay(1);
-//                   }
-//                 Serial.println("up");
-//                 down=0;
-//                 up=1;
-//                 radio.startListening();
-//                }
+                ReadVoltage = analogRead(A0);
+                if(ReadVoltage<=100&&down==0){
+                  radio.stopListening();
+                  sent_data.ch2 = 10;
+                   for(int y=0;y<100;y++){
+                      radio.write(&sent_data, sizeof(Data_to_be_sent));
+                       Serial.println(sent_data.ch2);
+                      delay(1);
+                   }
+                 Serial.println("down");
+                 down=1;
+                 up=0;
+                 radio.startListening();
+                }
+                if(ReadVoltage>=900&&up==0){
+                  sent_data.ch2 = 20;
+                  radio.stopListening();
+                   for(int y=0;y<100;y++){
+                      radio.write(&sent_data, sizeof(Data_to_be_sent));
+                       Serial.println(sent_data.ch2);
+                      delay(1);
+                   }
+                 Serial.println("up");
+                 down=0;
+                 up=1;
+                 radio.startListening();
+                }
 
       estado = 1;
       break;
