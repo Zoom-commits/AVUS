@@ -1,0 +1,22 @@
+Change Component Designator: OldDesignator=C8_1uF NewDesignator=C8_0.1uF
+Change Component Designator: OldDesignator=C9_1uF NewDesignator=C9_0.1uF
+Added Component: Designator=R_10K_1(RESC2012X65N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "EU_RoHS_Compliance"; Value = "Compliant with Exemptions"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "TE Connectivity"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "2-2176053-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0805"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power_Rating"; Value = ".25 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = ".33"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/2-2176053-0/TE%20Connectivity/view-part/2214508/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3v3 Pin=R_10K_1-1
+Added Pin To Net: NetName=NetC9_1uF_2 Pin=R_10K_1-2
+Change Net Name : Old Net Name=NetC8_1uF_2 New Net Name=NetC8_0.1uF_2
+Change Net Name : Old Net Name=NetC9_1uF_2 New Net Name=NetC9_0.1uF_2
+Change Net Color : Old Net Color=RGB(0, 190, 0) New Net Color=Default
+Change Net Color : Old Net Color=RGB(0, 190, 0) New Net Color=Default
+Added Member To Class: ClassName=SCH_tx Member=Component MAX MAX98357AETE+
+Added Member To Class: ClassName=SCH_tx Member=Component R_10K_1 0805
