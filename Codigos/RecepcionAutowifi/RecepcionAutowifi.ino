@@ -30,7 +30,7 @@ const int PinSalir = LOW;
 void setup()
 {
   pinMode(PinSalir, INPUT);
-  Serial.begin(9600);
+  //Serial.begin(9600);
   //We reset the received values
   received_data.ch1 = 124;
   //sent_data.ch2 = 223;
@@ -73,12 +73,12 @@ void loop()
       ch1_value = received_data.ch1;
      // Serial.println(ch1_value);
       if (ch1_value == 94) {
-         Serial.println("AAA");
+         //Serial.println("AAA");
         sing();
         received_data.ch1 = 33;
       }
       if (ch1_value == 150) {
-         Serial.println("bbb");
+         //Serial.println("bbb");
         sound();
         received_data.ch1 = 33;
       }
@@ -91,10 +91,10 @@ void loop()
                   sent_data.ch2 = 10;
                    for(int y=0;y<100;y++){
                       radio.write(&sent_data, sizeof(Data_to_be_sent));
-                       Serial.println(sent_data.ch2);
+                      // Serial.println(sent_data.ch2);
                       delay(1);
                    }
-                 Serial.println("down");
+                 //Serial.println("down");
                  down=1;
                  up=0;
                  radio.startListening();
@@ -104,10 +104,10 @@ void loop()
                   radio.stopListening();
                    for(int y=0;y<100;y++){
                       radio.write(&sent_data, sizeof(Data_to_be_sent));
-                       Serial.println(sent_data.ch2);
+                       //Serial.println(sent_data.ch2);
                       delay(1);
                    }
-                 Serial.println("up");
+                 //Serial.println("up");
                  down=0;
                  up=1;
                  radio.startListening();
@@ -157,7 +157,8 @@ void sing() {
   int size = sizeof(melodyA) / sizeof(int);
   for (int thisNote = 0; thisNote < size; thisNote++) {
     if (digitalRead(PinSalir) == LOW) {
-      Serial.println("LOW");
+    //
+    Serial.println("LOW");
       break;
     }
     buzz(melodyPin, melodyA[thisNote], noteDuration[thisNote] * 2);
@@ -183,7 +184,7 @@ void sound() {
     //  }
 
     if (digitalRead(PinSalir) == LOW) {
-      Serial.println("LOW");
+     // Serial.println("LOW");
       break;
     }
     // calculo de la duracin de la nota, dividimos un segundo por el tipo de nota
