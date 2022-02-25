@@ -1,0 +1,108 @@
+Removed Pin From Net: NetName=3v3 Pin=C1_0.1uF-1
+Removed Pin From Net: NetName=GND Pin=C1_0.1uF-2
+Removed Pin From Net: NetName=3v3 Pin=C2_10uF-1
+Removed Pin From Net: NetName=GND Pin=C2_10uF-2
+Removed Pin From Net: NetName=NetAUDIO_1 Pin=C3_220pF-1
+Removed Pin From Net: NetName=GND Pin=C3_220pF-2
+Removed Pin From Net: NetName=NetAUDIO_2 Pin=C4_220pF-1
+Removed Pin From Net: NetName=GND Pin=C4_220pF-2
+Removed Pin From Net: NetName=GND Pin=C5_10uF-1
+Removed Pin From Net: NetName=3v3 Pin=C5_10uF-2
+Removed Pin From Net: NetName=GND Pin=C6_1uF-1
+Removed Pin From Net: NetName=3v3 Pin=C6_1uF-2
+Removed Pin From Net: NetName=GND Pin=C7_10uF-1
+Removed Pin From Net: NetName=NetC7_10uF_2 Pin=C7_10uF-2
+Removed Pin From Net: NetName=GND Pin=C8_0.1uF-1
+Removed Pin From Net: NetName=NetC8_0.1uF_2 Pin=C8_0.1uF-2
+Removed Pin From Net: NetName=GND Pin=C9_0.1uF-1
+Removed Pin From Net: NetName=NetC9_0.1uF_2 Pin=C9_0.1uF-2
+Removed Pin From Net: NetName=GND Pin=C10_100nF-1
+Removed Pin From Net: NetName=3v3 Pin=C10_100nF-2
+Removed Pin From Net: NetName=NetMAX_4 Pin=R_1M [105]-1
+Removed Pin From Net: NetName=3v3 Pin=R_1M [105]-2
+Removed Member From Class: ClassName=SCH_tx Member=C1_0.1uF
+Removed Member From Class: ClassName=SCH_tx Member=C2_10uF
+Removed Member From Class: ClassName=SCH_tx Member=C3_220pF
+Removed Member From Class: ClassName=SCH_tx Member=C4_220pF
+Removed Member From Class: ClassName=SCH_tx Member=C5_10uF
+Removed Member From Class: ClassName=SCH_tx Member=C6_1uF
+Removed Member From Class: ClassName=SCH_tx Member=C7_10uF
+Removed Member From Class: ClassName=SCH_tx Member=C8_0.1uF
+Removed Member From Class: ClassName=SCH_tx Member=C9_0.1uF
+Removed Member From Class: ClassName=SCH_tx Member=C10_100nF
+Removed Member From Class: ClassName=SCH_tx Member=R_1M [105]
+Change Component Footprint: Designator=AUDIO Old Footprint=HANDSON_KF301-2P New Footprint=JST_B2B-XH-A(LF)(SN)
+Change Component Comment : Designator=R_1K Old Comment=0805 New Comment=1K 0805
+Change Component Comment : Designator=R_10K Old Comment=0805 New Comment=10K 0805
+Change Component Comment : Designator=R_10K_1 Old Comment=0805 New Comment=10K 0805
+Change Component Comment : Designator=FL1 Old Comment=Ferrite Beads New Comment=
+Change Component Comment : Designator=FL2 Old Comment=Ferrite Beads New Comment=
+Change Component Comment : Designator=AUDIO Old Comment=KF301-2P New Comment=
+Change Component Designator: OldDesignator=R_1K NewDesignator=R1
+Change Component Designator: OldDesignator=R_10K NewDesignator=R_en
+Change Component Designator: OldDesignator=R_10K_1 NewDesignator=R_rst
+Change Component Designator: OldDesignator=S1_EN NewDesignator=S_EN
+Change component parameters: Designator = "AUDIO" ("Audio"); Footprint = "HANDSON_KF301-2P"; UniqueID = "\BAYJOMII" ("\BAYJOMII")
+Change component parameters (AddParameter): Name = "Availability"; Value = "In Stock"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/B2B-XH-A(LF)(SN)/JST%20Sales%20America%20Inc./view-part/492310/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "JST Sales"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "B2B-XH-A(LF)(SN)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Purchase-URL"; Value = "https://pricing.snapeda.com/search/part/B2B-XH-A(LF)(SN)/?ref=eda"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B2B-XH-A(LF)(SN)/JST%20Sales%20America%20Inc./view-part/492310/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Added Component: Designator=R(RESC3116X65N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "RC1206JR-0713RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "3116 Yageo"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/RC1206JR-0713RL/Yageo/view-part/105893/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin C1-1
+Add Pin To Net: Unknown Pin: Pin C1-2
+Add Pin To Net: Unknown Pin: Pin C2-1
+Add Pin To Net: Unknown Pin: Pin C2-2
+Add Pin To Net: Unknown Pin: Pin C3-1
+Add Pin To Net: Unknown Pin: Pin C3-2
+Add Pin To Net: Unknown Pin: Pin C4-1
+Add Pin To Net: Unknown Pin: Pin C4-2
+Add Pin To Net: Unknown Pin: Pin C5-1
+Add Pin To Net: Unknown Pin: Pin C5-2
+Add Pin To Net: Unknown Pin: Pin C6-1
+Add Pin To Net: Unknown Pin: Pin C6-2
+Add Pin To Net: Unknown Pin: Pin C7-1
+Add Pin To Net: Unknown Pin: Pin C7-2
+Add Pin To Net: Unknown Pin: Pin C8-1
+Add Pin To Net: Unknown Pin: Pin C8-2
+Add Pin To Net: Unknown Pin: Pin C_en-1
+Add Pin To Net: Unknown Pin: Pin C_en-2
+Add Pin To Net: Unknown Pin: Pin C_rst-1
+Add Pin To Net: Unknown Pin: Pin C_rst-2
+Added Pin To Net: NetName=3v3 Pin=R-1
+Added Pin To Net: NetName=NetMAX_4 Pin=R-2
+Change Net Name : Old Net Name=NetC7_10uF_2 New Net Name=NetC1_2
+Change Net Name : Old Net Name=NetC8_0.1uF_2 New Net Name=NetC_en_1
+Change Net Name : Old Net Name=NetC9_0.1uF_2 New Net Name=NetC_rst_1
+Add Class Member: Failed to add class member : Component C1 10uf 0805
+Add Class Member: Failed to add class member : Component C2 10uf 0805
+Add Class Member: Failed to add class member : Component C3 1uf 0805
+Add Class Member: Failed to add class member : Component C4 220pF 0805
+Add Class Member: Failed to add class member : Component C5 220pF 0805
+Add Class Member: Failed to add class member : Component C6 220pF 0805
+Add Class Member: Failed to add class member : Component C7 220pF 0805
+Add Class Member: Failed to add class member : Component C8 100nF 0805
+Add Class Member: Failed to add class member : Component C_en 0.1uf 0805
+Add Class Member: Failed to add class member : Component C_rst 0.1uf 0805
+Added Member To Class: ClassName=SCH_tx Member=Component R RC1206JR-0713RL

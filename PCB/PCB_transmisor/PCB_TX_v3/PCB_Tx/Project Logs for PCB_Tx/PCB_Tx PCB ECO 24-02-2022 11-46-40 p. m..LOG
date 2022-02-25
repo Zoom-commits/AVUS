@@ -1,0 +1,11 @@
+Added Component: Designator=C8(CAPC2012X94N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "0805YC103J4T2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2012 AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0805YC103J4T2A/AVX/view-part/606803/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C8-1
+Added Pin To Net: NetName=3v3 Pin=C8-2
+Added Member To Class: ClassName=SCH_tx Member=Component C8 100nF 0805

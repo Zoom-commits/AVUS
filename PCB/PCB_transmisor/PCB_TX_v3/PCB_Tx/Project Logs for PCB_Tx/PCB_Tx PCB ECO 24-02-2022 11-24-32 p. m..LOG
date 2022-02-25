@@ -1,0 +1,47 @@
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Add Component: Footprint Not Found CAPC2012X94N
+Added Component: Designator=C_en(CAPC2012X94N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "0805YC103J4T2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2012 AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0805YC103J4T2A/AVX/view-part/606803/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found CAPC2012X94N
+Add Pin To Net: Unknown Pin: Pin C1-1
+Add Pin To Net: Unknown Pin: Pin C1-2
+Add Pin To Net: Unknown Pin: Pin C2-1
+Add Pin To Net: Unknown Pin: Pin C2-2
+Add Pin To Net: Unknown Pin: Pin C3-1
+Add Pin To Net: Unknown Pin: Pin C3-2
+Add Pin To Net: Unknown Pin: Pin C4-1
+Add Pin To Net: Unknown Pin: Pin C4-2
+Add Pin To Net: Unknown Pin: Pin C5-1
+Add Pin To Net: Unknown Pin: Pin C5-2
+Add Pin To Net: Unknown Pin: Pin C6-1
+Add Pin To Net: Unknown Pin: Pin C6-2
+Add Pin To Net: Unknown Pin: Pin C7-1
+Add Pin To Net: Unknown Pin: Pin C7-2
+Add Pin To Net: Unknown Pin: Pin C8-1
+Add Pin To Net: Unknown Pin: Pin C8-2
+Added Pin To Net: NetName=NetC_en_1 Pin=C_en-1
+Added Pin To Net: NetName=GND Pin=C_en-2
+Add Pin To Net: Unknown Pin: Pin C_rst-1
+Add Pin To Net: Unknown Pin: Pin C_rst-2
+Add Class Member: Failed to add class member : Component C1 10uf 0805
+Add Class Member: Failed to add class member : Component C2 10uf 0805
+Add Class Member: Failed to add class member : Component C3 1uf 0805
+Add Class Member: Failed to add class member : Component C4 220pF 0805
+Add Class Member: Failed to add class member : Component C5 220pF 0805
+Add Class Member: Failed to add class member : Component C6 220pF 0805
+Add Class Member: Failed to add class member : Component C7 220pF 0805
+Add Class Member: Failed to add class member : Component C8 100nF 0805
+Added Member To Class: ClassName=SCH_tx Member=Component C_en 0.1uf 0805
+Add Class Member: Failed to add class member : Component C_rst 0.1uf 0805
