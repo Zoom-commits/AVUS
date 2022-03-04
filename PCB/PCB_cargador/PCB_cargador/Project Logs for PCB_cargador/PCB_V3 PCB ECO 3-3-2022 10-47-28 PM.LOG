@@ -1,0 +1,6 @@
+Add Component: Footprint Not Found DO-214AC
+Add Pin To Net: Unknown Pin: Pin D_s-K
+Added Pin To Net: NetName=NetD_s_A Pin=L-1
+Added Pin To Net: NetName=NetD_s_A Pin=U-1
+Added Net: Name=NetD_s_A
+Add Class Member: Failed to add class member : Component D_s SS14
