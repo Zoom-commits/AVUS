@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=NetC1_2 Pin=J1-1
+Removed Pin From Net: NetName=GND Pin=J1-5
+Removed Member From Class: ClassName=SCH_tx Member=J1
+Added Component: Designator=J?(GCT_USB4125-GF-A_REVA)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/USB4125-GF-A/Global%20Connector%20Technology/view-part/5160675/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Global Connector Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "USB4125-GF-A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/USB4125-GF-A/Global%20Connector%20Technology/view-part/5160675/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_2 Pin=J?-A9
+Added Pin To Net: NetName=GND Pin=J?-A12
+Added Pin To Net: NetName=NetC1_2 Pin=J?-B9
+Added Pin To Net: NetName=GND Pin=J?-B12
+Added Member To Class: ClassName=SCH_tx Member=Component J? USB4125-GF-A_REVA
