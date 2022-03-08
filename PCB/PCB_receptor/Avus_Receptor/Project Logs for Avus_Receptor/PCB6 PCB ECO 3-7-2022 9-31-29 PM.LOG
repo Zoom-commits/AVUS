@@ -1,0 +1,26 @@
+Added Component: Designator=C3(CAPC2012X94N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "0805YC103J4T2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2012 AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0805YC103J4T2A/AVX/view-part/606803/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found CAPC1608X90
+Added Component: Designator=Crst(CAPC2012X94N)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "0805YC103J4T2A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "2012 AVX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/0805YC103J4T2A/AVX/view-part/606803/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=3v3 Pin=C3-2
+Add Pin To Net: Unknown Pin: Pin C_micro-1
+Add Pin To Net: Unknown Pin: Pin C_micro-2
+Added Pin To Net: NetName=NetC_rst_1 Pin=Crst-2
+Change Net Name : Old Net Name=NetC_rst_1 New Net Name=NetCrst_2
+Added Pin To Net: NetName=NetCrst_1 Pin=Crst-1
+Added Pin To Net: NetName=NetCrst_1 Pin=J_dtr-1
+Added Net: Name=NetCrst_1

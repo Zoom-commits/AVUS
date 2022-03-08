@@ -1,0 +1,99 @@
+Removed Pin From Net: NetName=GND Pin=3.3v regudador-1
+Removed Pin From Net: NetName=3v3 Pin=3.3v regudador-2
+Removed Pin From Net: NetName=3v3 Pin=C4-1
+Removed Pin From Net: NetName=GND Pin=C4-2
+Removed Pin From Net: NetName=GND Pin=C5-1
+Removed Pin From Net: NetName=3v3 Pin=C5-2
+Removed Pin From Net: NetName=GND Pin=C6-1
+Removed Pin From Net: NetName=GND Pin=J-2
+Removed Pin From Net: NetName=3v3 Pin=R1-2
+Change Component Comment : Designator=R_b Old Comment=2-2176053-0 New Comment=1 M
+Change Component Comment : Designator=R_a Old Comment=2-2176053-0 New Comment=470 K
+Change Component Designator: OldDesignator=C NewDesignator=C_ref
+Change Component Designator: OldDesignator=R3 NewDesignator=R_Buz
+Change Component Designator: OldDesignator=R NewDesignator=R_rst
+Change Component Designator: OldDesignator=R_a NewDesignator=R_batA
+Change Component Designator: OldDesignator=R_b NewDesignator=R_batB
+Added Component: Designator=C1(CT1206)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "T491A106M020AT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 Kemet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/T491A106M020AT/KEMET/view-part/104616/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C2(CT1206)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "T491A106M020AT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 Kemet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/T491A106M020AT/KEMET/view-part/104616/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found CAPC1608X90
+Add Component: Footprint Not Found CAPC1608X90
+Add Component: Footprint Not Found CAPC1608X90
+Added Component: Designator=J_Bat(HANDSON_KF301-2P)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Handson Technology"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "KF301-2P"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "Package"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/KF301-2P/Handson%20Technology/view-part/4276957/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=J_dtr(PIN1)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=J_rx(PIN1)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=J_tx(PIN1)
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=U(SOT-23-5)
+Add component (AddParameter): Name = "Digi-Key_Part_Number"; Value = "576-1259-1-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.in/product-detail/en/microchip-technology/MIC5205-3.3YM5-TR/576-1259-1-ND/771886?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "MIC5205-3.3YM5-TR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SOT-23-5 Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/MIC5205-3.3YM5-TR/Microchip/view-part/424295/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C1-NEG
+Added Pin To Net: NetName=GND Pin=C2-NEG
+Added Pin To Net: NetName=3v3 Pin=C2-POS
+Add Pin To Net: Unknown Pin: Pin C3-1
+Add Pin To Net: Unknown Pin: Pin C3-2
+Add Pin To Net: Unknown Pin: Pin C_micro-1
+Add Pin To Net: Unknown Pin: Pin C_micro-2
+Added Pin To Net: NetName=GND Pin=J_Bat-2
+Added Pin To Net: NetName=GND Pin=U-2
+Added Pin To Net: NetName=3v3 Pin=U-5
+Added Pin To Net: NetName=GND Pin=U_m-3
+Added Pin To Net: NetName=3v3 Pin=U_m-6
+Change Net Name : Old Net Name=NetC_1 New Net Name=NetC_ref_1
+Change Net Name : Old Net Name=NetR3_1 New Net Name=NetR_Buz_1
+Change Net Name : Old Net Name=NetR_a_1 New Net Name=NetR_batA_1
+Change Net Color : Old Net Color=RGB(158, 161, 117) New Net Color=RGB(0, 190, 0)
+Change Net Color : Old Net Color=RGB(158, 161, 117) New Net Color=RGB(77, 53, 6)
+Added Pin To Net: NetName=NetC1_POS Pin=C1-POS
+Added Pin To Net: NetName=NetC1_POS Pin=J_Bat-1
+Added Pin To Net: NetName=NetC1_POS Pin=P+-1
+Added Pin To Net: NetName=NetC1_POS Pin=R_batA-2
+Added Pin To Net: NetName=NetC1_POS Pin=U-1
+Added Pin To Net: NetName=NetC1_POS Pin=U-3
+Added Net: Name=NetC1_POS
+Added Pin To Net: NetName=NetC_rst_1 Pin=R_rst-2
+Added Pin To Net: NetName=NetC_rst_1 Pin=SW-2
+Added Pin To Net: NetName=NetC_rst_1 Pin=U_m-29
+Added Net: Name=NetC_rst_1
+Added Pin To Net: NetName=NetC_rst_2 Pin=J_dtr-1
+Added Net: Name=NetC_rst_2
+Added Pin To Net: NetName=NetJ_rx_1 Pin=J_rx-1
+Added Pin To Net: NetName=NetJ_rx_1 Pin=U_m-31
+Added Net: Name=NetJ_rx_1
+Added Pin To Net: NetName=NetJ_tx_1 Pin=J_tx-1
+Added Pin To Net: NetName=NetJ_tx_1 Pin=U_m-30
+Added Net: Name=NetJ_tx_1

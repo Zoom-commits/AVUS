@@ -130,7 +130,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=JVHTISAB
+DocumentUniqueId=EMKGXDOU
 
 [Document6]
 DocumentPath=Libraries\bornera.SchLib
@@ -728,23 +728,6 @@ GenerateClassCluster=0
 DocumentUniqueId=GXAXQIGF
 
 [Document41]
-DocumentPath=proteccionBat.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=YUFLGKZE
-
-[Document42]
 DocumentPath=Job1.OutJob
 AnnotationEnabled=1
 AnnotateStartValue=1

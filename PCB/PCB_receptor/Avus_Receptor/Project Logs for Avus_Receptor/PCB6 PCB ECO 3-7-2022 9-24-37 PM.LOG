@@ -1,0 +1,33 @@
+Removed Pin From Net: NetName=GND Pin=C1-NEG
+Removed Pin From Net: NetName=NetC1_POS Pin=C1-POS
+Removed Pin From Net: NetName=GND Pin=C2-NEG
+Removed Pin From Net: NetName=3v3 Pin=C2-POS
+Added Component: Designator=C1(CT1206)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "T491A106M020AT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 Kemet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/T491A106M020AT/KEMET/view-part/104616/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=C2(CT1206)
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "T491A106M020AT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "1206 Kemet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/T491A106M020AT/KEMET/view-part/104616/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found CAPC1608X90
+Add Component: Footprint Not Found CAPC1608X90
+Add Component: Footprint Not Found CAPC1608X90
+Added Pin To Net: NetName=GND Pin=C1-NEG
+Added Pin To Net: NetName=NetC1_POS Pin=C1-POS
+Added Pin To Net: NetName=GND Pin=C2-NEG
+Added Pin To Net: NetName=3v3 Pin=C2-POS
+Add Pin To Net: Unknown Pin: Pin C_3-1
+Add Pin To Net: Unknown Pin: Pin C_3-2
+Add Pin To Net: Unknown Pin: Pin C_micro-1
+Add Pin To Net: Unknown Pin: Pin C_micro-2
+Add Pin To Net: Unknown Pin: Pin C_rst-1
+Add Pin To Net: Unknown Pin: Pin C_rst-2
