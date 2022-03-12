@@ -1656,7 +1656,7 @@ UpdateToLatestRevision=1
 PartTypes=0
 
 [NetInfos]
-Net1=NetName=3v3|NetColor=$0000BE00
+Net1=NetName=3v3|NetColor=$006E6EFF
 Net2=NetName=GND|NetColor=$0006354D
 Net3=NetName=NetU_m_3|NetColor=$0006354D
 
