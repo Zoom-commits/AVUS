@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=GND Pin=C1-1
+Removed Pin From Net: NetName=VCC Pin=C1-2
+Change Component Footprint: Designator=C1 Old Footprint=CAPC4532X254N New Footprint=CAPC1608X90
+Change component parameters: Designator = "C1" ("C1"); Footprint = "CAPC4532X254N"; UniqueID = "\PSMBWITS" ("\PSMBWITS")
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "311-1344-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/yageo/CC0603KRX7R9BB104/311-1344-1-ND/2103128?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CC0603KRX7R9BB104"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "0603 Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CC0603KRX7R9BB104/Yageo/view-part/78680/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VCC Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Room: Name=schematicCharger

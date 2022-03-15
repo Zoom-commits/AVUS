@@ -1,0 +1,60 @@
+Removed Pin From Net: NetName=GND Pin=C2-2
+Removed Pin From Net: NetName=GND Pin=C5-1
+Removed Pin From Net: NetName=VCC Pin=C5-2
+Removed Pin From Net: NetName=NetC6_1 Pin=C6-1
+Removed Pin From Net: NetName=GND Pin=C6-2
+Change Component Footprint: Designator=C2 Old Footprint=CAPC4532X254N New Footprint=CAPC1608X90
+Change Component Footprint: Designator=C3 Old Footprint=CAPC4532X254N New Footprint=CAPC1608X90
+Change Component Footprint: Designator=C4 Old Footprint=CAPC4532X254N New Footprint=CAPC1608X90
+Change Component Footprint: Designator=C5 Old Footprint=CAPC4532X254N New Footprint=CAPC1608X90
+Change Component Footprint: Designator=C6 Old Footprint=CAPC4532X254N New Footprint=CAPC1608X90
+Change component parameters: Designator = "C2" ("C2"); Footprint = "CAPC4532X254N"; UniqueID = "\AUKBLHJN" ("\AUKBLHJN")
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "311-1344-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/yageo/CC0603KRX7R9BB104/311-1344-1-ND/2103128?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CC0603KRX7R9BB104"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "0603 Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CC0603KRX7R9BB104/Yageo/view-part/78680/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "C3" ("C3"); Footprint = "CAPC4532X254N"; UniqueID = "\JCWDYCDR" ("\JCWDYCDR")
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "311-1344-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/yageo/CC0603KRX7R9BB104/311-1344-1-ND/2103128?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CC0603KRX7R9BB104"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "0603 Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CC0603KRX7R9BB104/Yageo/view-part/78680/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "C4" ("C4"); Footprint = "CAPC4532X254N"; UniqueID = "\FQSXHHQS" ("\FQSXHHQS")
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "311-1344-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/yageo/CC0603KRX7R9BB104/311-1344-1-ND/2103128?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CC0603KRX7R9BB104"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "0603 Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CC0603KRX7R9BB104/Yageo/view-part/78680/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "C5" ("C5"); Footprint = "CAPC4532X254N"; UniqueID = "\DFIVHWIK" ("\DFIVHWIK")
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "311-1344-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/yageo/CC0603KRX7R9BB104/311-1344-1-ND/2103128?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CC0603KRX7R9BB104"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "0603 Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CC0603KRX7R9BB104/Yageo/view-part/78680/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Change component parameters: Designator = "C6" ("C6"); Footprint = "CAPC4532X254N"; UniqueID = "\XNQDLFFI" ("\XNQDLFFI")
+Change component parameters (AddParameter): Name = "Digi-Key_Part_Number"; Value = "311-1344-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Digi-Key_Purchase_URL"; Value = "https://www.digikey.com/product-detail/en/yageo/CC0603KRX7R9BB104/311-1344-1-ND/2103128?utm_source=snapeda&utm_medium=aggregator&utm_campaign=symbol"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MF"; Value = "Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MP"; Value = "CC0603KRX7R9BB104"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "0603 Yageo"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/CC0603KRX7R9BB104/Yageo/view-part/78680/?ref=snap"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=VCC Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=NetC6_1 Pin=C6-2
+Change Net Name : Old Net Name=NetC6_1 New Net Name=NetC6_2
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=PIN_BAT-1
+Added Pin To Net: NetName=NetC2_2 Pin=U1-5
+Added Net: Name=NetC2_2
