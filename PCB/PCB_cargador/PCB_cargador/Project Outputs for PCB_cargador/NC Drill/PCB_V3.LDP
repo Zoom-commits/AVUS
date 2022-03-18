@@ -1,2 +1,3 @@
-Layer Pairs Export File for PCB: C:\Users\crida\Documents\GitHub\AVUS\PCB\PCB_cargador\PCB_cargador\PCB_V3.PcbDoc
-LayersSetName=Top_Bot_Thru_Holes|DrillFile=pcb_v3.txt|DrillLayers=gtl,gbl
+Layer Pairs Export File for PCB: C:\Users\Cristian\Documents\GitHub\PCB\PCB_cargador\PCB_cargador\PCB_V3.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=pcb_v3-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=pcb_v3-slotholes.txt|DrillLayers=gtl,gbl

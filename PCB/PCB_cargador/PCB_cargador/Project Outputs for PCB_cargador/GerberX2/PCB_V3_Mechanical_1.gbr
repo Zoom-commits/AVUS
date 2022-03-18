@@ -1,10 +1,12 @@
-%TF.GenerationSoftware,Altium Limited,Altium Designer,20.0.13 (296)*%
+%TF.GenerationSoftware,Altium Limited,Altium Designer,22.2.1 (43)*%
 G04 Layer_Color=16711935*
 %FSLAX45Y45*%
 %MOMM*%
+%TF.SameCoordinates,1A700276-89F6-4FF8-B3D7-4A67EA63658B*%
+%TF.FilePolarity,Positive*%
 %TF.FileFunction,Other,Mechanical_1*%
 %TF.Part,Single*%
 G01*
 G75*
-%TF.MD5,d6b61b4f6bf5d67109442893bb4d7f76*%
+%TF.MD5,fdf82549d8b7d4c8587c7284cd69caae*%
 M02*
