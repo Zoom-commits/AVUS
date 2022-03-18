@@ -11,8 +11,24 @@ pinMode(b6, INPUT);
 }
 
 void activarBotones(){
-// if(digitalRead(b1)){
-//  llavesitas(94);
-// }
+  
+   if(digitalRead(b1)){
+      llavesitas(111,"/Device1.mp3","Hoy");
+   }
+   if(digitalRead(b2)){
+      llavesitas(222,"/Device2.mp3","Hoy");
+   }
+   if(digitalRead(b3)){
+      llavesitas(333,"/Device3.mp3","Hoy");
+   }
+   if(digitalRead(b4)){
+      llavesitas(444,"/Device4.mp3","Hoy");
+   }
+   if(digitalRead(b5)){
+      llavesitas(555,"/Device5.mp3","Hoy");
+   }
+   if(digitalRead(b6)){
+      llavesitas(666,"/Device6.mp3","Hoy");
+   }
 
 }
