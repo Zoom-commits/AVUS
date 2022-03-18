@@ -54,8 +54,10 @@ void nrfConfiguracion(){
     received_data.ch2 = 127;
 }
 
-void llavesitas(int val,String dispo, String horita){
-    radio.stopListening();
+void llavesitas(int val,const char * dispo, String horita, String Devices){
+  //const char * sonidotx= dispo;
+  
+   radio.stopListening();
    Serial.println("funcion 2 OK");
    sent_data.ch1 = val;
 
@@ -65,7 +67,7 @@ void llavesitas(int val,String dispo, String horita){
       Serial.println(sent_data.ch1);
    }
    
-   Device = "Device 1"; 
+   Device = Devices; 
    int i = (random(90, 200));
    humi = i;
    audio.connecttoFS(SD,dispo);         

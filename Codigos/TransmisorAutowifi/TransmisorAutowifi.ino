@@ -70,17 +70,18 @@ void loop() {
 Notificaciones();
 Notificaciones1();
 Notificaciones2();
+activarBotones();
 // 
   int state=Serial.read();
   //Serial.println(state);
 //  delay(1000);
   if(state==49){
    
-        llavesitas(94,"/Device1.mp3","hoy");
+        llavesitas(94,"/Device1.mp3","hoy","Dispositivo 1");
       state=4;
   }
   if(state==50){
-     llavesitas(150,"Dispositivo 2","mañana");
+     llavesitas(150,"/Device2.mp3","mañana","Dispositivo 2");
      printLocalTime();
      state=4;
   }
