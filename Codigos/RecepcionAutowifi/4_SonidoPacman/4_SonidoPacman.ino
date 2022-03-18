@@ -76,7 +76,7 @@ int divider = 0, noteDuration = 0;
 void setup()
 {
   pinMode(PinSalir, INPUT);
-  Serial.begin(9600);
+ // Serial.begin(9600);
   //We reset the received values
   received_data.ch1 = 124;
   //sent_data.ch2 = 223;
@@ -124,8 +124,8 @@ void loop()
       ch1_value = received_data.ch1;
 //      Serial.println(ch1_value);
      
-      if (ch1_value == 150) {
-         Serial.println("bbb");
+      if (ch1_value == 44) {
+       //  Serial.println("bbb");
         sing();
         received_data.ch1 = 33;
       }
@@ -191,4 +191,3 @@ void sing() {
     noTone(buzzer);
   }
 }
-

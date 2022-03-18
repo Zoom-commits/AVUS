@@ -223,7 +223,7 @@ void loop()
       ch1_value = received_data.ch1;
 //      Serial.println(ch1_value);
      
-      if (ch1_value == 150) {
+      if (ch1_value == 22) {
 //         Serial.println("bbb");
         sing();
         received_data.ch1 = 33;
@@ -291,5 +291,3 @@ void sing() {
     noTone(buzzer);
   }
 }
-
-
