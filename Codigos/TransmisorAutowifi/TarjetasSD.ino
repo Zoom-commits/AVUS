@@ -8,11 +8,10 @@
 #define HSPI_SS     15
 File archivo;     // objeto archivo del tipo File
 
-float Temperature=3.14;
-float Humidity=4.85;
-String formattedDate="hola";
-String dayStamp="prueba";
-String timeStamp="despues de hoy";
+
+//String formattedDate="hola";
+//String dayStamp="prueba";
+//String timeStamp="despues de hoy";
 String dataMessage;
 
 void sdPinConfiguracion(){
@@ -32,11 +31,12 @@ void sdConfiguracion(){
 }
 
 void logSDCard(String dispositivo, String Horita) {
-  dataMessage =  String(dispositivo) + "," + String(Horita) ;
+  dataMessage =  String(dispositivo) + "," + String(Horita) + "\r\n";
   Serial.print("Save data: ");
   Serial.println(dataMessage);
   appendFile(SD, "/data.csv", dataMessage.c_str());
 }
+
 
 // Append data to the SD card (DON'T MODIFY THIS FUNCTION)
 void appendFile(fs::FS &fs, const char * path, const char * message) {

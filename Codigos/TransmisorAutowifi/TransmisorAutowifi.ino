@@ -75,16 +75,13 @@ activarBotones();
   int state=Serial.read();
   //Serial.println(state);
 //  delay(1000);
-  if(state==49){
-   
-        llavesitas(94,"/Device1.mp3","hoy","Dispositivo 1");
-      state=4;
-  }
-  if(state==50){
-     llavesitas(150,"/Device2.mp3","mañana","Dispositivo 2");
-     printLocalTime();
-     state=4;
-  }
- activarBotones();
-  
+//  if(state==49){
+//     llavesitas(94,"/Device1.mp3","hoy","Dispositivo 1");
+//     state=4;
+//  }
+//  if(state==50){
+//     llavesitas(150,"/Device2.mp3","mañana","Dispositivo 2");
+//     printLocalTime();
+//     state=4;
+//  }  
 }

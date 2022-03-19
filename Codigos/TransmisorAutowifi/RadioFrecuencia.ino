@@ -78,6 +78,6 @@ void llavesitas(int val,const char * dispo, String horita, String Devices){
    Serial.println("The data was storaged in Sheets");
 
 //************* SD CARD STORAGE ***********************// 
- logSDCard(dispo,horita);
+ logSDCard(Devices,horita);
  radio.startListening();
 }
