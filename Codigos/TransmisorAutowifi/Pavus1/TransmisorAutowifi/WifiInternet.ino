@@ -146,35 +146,44 @@ void WiFi_SendData() {
 
 //************* NOTIFICACTIONS AND SLEEP MODE ***********************// 
 void Notificaciones(){
- if(rtc.getHour(true) == 22 && rtc.getMinute()== 45 && approve==true){
+ if(rtc.getHour(true) == 8 && rtc.getMinute()== 00 && approve==true){
     approve=false;
-// audio.connecttoFS(SD,"/Music/005pastillas.mp3");
-    audio.connecttohost("http://mp3.ffh.de/radioffh/hqlivestream.mp3");
+    audio.connecttoFS(SD,"/8am_audio.mp3");
     Serial.println(timeClient.getDay());
     Serial.println("Recordatorio uno");
     audio.loop();
- } else if (rtc.getHour(true) == 22 && rtc.getMinute() > 47){
+ } else if (rtc.getHour(true) == 8 && rtc.getMinute() > 00){
     approve=true;
  }
 }
 
 void Notificaciones1(){
- if(rtc.getHour(true) == 19 && rtc.getMinute()==12 && approve1==true){
+ if(rtc.getHour(true) == 11 && rtc.getMinute()==00 && approve1==true){
     approve1=false;
-    audio.connecttoFS(SD,"/quenospaso.mp3");
+    audio.connecttoFS(SD,"/11am_audio.mp3");
     Serial.println("Recordatorio 2");
     audio.loop();
- } else if (rtc.getHour(true) == 19 && rtc.getMinute()>12){
+ } else if (rtc.getHour(true) == 11 && rtc.getMinute()>00){
     approve1=true;
  }
 }
- void Notificaciones2(){
- if(rtc.getHour(true) == 19 && rtc.getMinute()==10 && approve2==true){
+void Notificaciones2(){
+ if(rtc.getHour(true) == 15 && rtc.getMinute()==00 && approve2==true){
+    approve2=false;
+    audio.connecttoFS(SD,"/3pm_audio.mp3");
+    Serial.println("Recordatorio 2");
+    audio.loop();
+ } else if (rtc.getHour(true) == 15 && rtc.getMinute()>00){
+    approve2=true;
+ }
+}
+void Apagado(){
+ if(rtc.getHour(true) == 15 && rtc.getMinute()==00 && approve2==true){
     approve2=false;
     Serial.println("A mimir");
     esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
     esp_deep_sleep_start();
- } else if (rtc.getHour(true) == 19 && rtc.getMinute()>10){
+ } else if (rtc.getHour(true) == 15 && rtc.getMinute()>00){
     approve2=true;
  }
 }

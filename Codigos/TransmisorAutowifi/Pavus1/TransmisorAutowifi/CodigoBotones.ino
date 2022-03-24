@@ -17,7 +17,7 @@ void activarBotones(){
       Serial.println(printLocalTime());
    }
    if(digitalRead(b2)){
-      llavesitas(22,"/Device2.mp3",printLocalTime(),"Dispositivo 2" );
+      llavesitas(22,"/Device2.mp3",printLocalTime(),"Dispositivo 2");
         Serial.println(printLocalTime());
    }
    if(digitalRead(b3)){
@@ -33,7 +33,7 @@ void activarBotones(){
         Serial.println(printLocalTime());
    }
    if(digitalRead(b6)){
-      llavesitas(66,"/Device6.mp3",printLocalTime(),"Dispositivo 6");  
+      llavesitas(66,"/Device6.mp3",printLocalTime(),"Dispositivo 6");
       Serial.println(printLocalTime());
    }
 
