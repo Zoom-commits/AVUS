@@ -13,15 +13,15 @@ pinMode(b6, INPUT);
 void activarBotones(){
   
    if(digitalRead(b1)){
-      llavesitas(11,"/Device1.mp3",printLocalTime(),"Dispositivo 1");
+      llavesitas(22,"/Device2.mp3",printLocalTime(),"Dispositivo 2");
       Serial.println(printLocalTime());
    }
    if(digitalRead(b2)){
-      llavesitas(22,"/Device2.mp3",printLocalTime(),"Dispositivo 2");
+      llavesitas(33,"/Device3.mp3",printLocalTime(),"Dispositivo 3");
         Serial.println(printLocalTime());
    }
    if(digitalRead(b3)){
-      llavesitas(33,"/Device3.mp3",printLocalTime(),"Dispositivo 3");
+      llavesitas(11,"/Device1.mp3",printLocalTime(),"Dispositivo 1");
         Serial.println(printLocalTime());
    }
    if(digitalRead(b4)){
@@ -29,11 +29,11 @@ void activarBotones(){
         Serial.println(printLocalTime());
    }
    if(digitalRead(b5)){
-      llavesitas(55,"/Device5.mp3",printLocalTime(),"Dispositivo 5");
+      llavesitas(66,"/Device6.mp3",printLocalTime(),"Dispositivo 6");
         Serial.println(printLocalTime());
    }
    if(digitalRead(b6)){
-      llavesitas(66,"/Device6.mp3",printLocalTime(),"Dispositivo 6");
+      llavesitas(55,"/Device5.mp3",printLocalTime(),"Dispositivo 5");
       Serial.println(printLocalTime());
    }
 

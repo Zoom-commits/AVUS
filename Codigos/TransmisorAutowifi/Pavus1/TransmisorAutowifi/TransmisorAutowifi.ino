@@ -35,7 +35,7 @@ void setup() {
   sdConfiguracion();
   //************* MAX I2C CONFIGURATION ***********************// 
   audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
-  audio.setVolume(20); // 0...21
+  audio.setVolume(19); // 0...21
       //audio.connecttohost("http://mp3.ffh.de/radioffh/hqlivestream.mp3");
  audio.connecttoFS(SD, "/Start.mp3");
   delay(100);
@@ -70,6 +70,15 @@ void loop() {
 Notificaciones();
 Notificaciones1();
 Notificaciones2();
+PRUEBA();
+PRUEBA1();
+PRUEBA2();
+PRUEBA3();
+PRUEBA4();
+PRUEBA5();
+PRUEBA6();
+PRUEBA7();
+PRUEBA8();
 activarBotones();
 // 
   int state=Serial.read();
