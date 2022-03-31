@@ -146,135 +146,68 @@ void WiFi_SendData() {
 
 //************* NOTIFICACTIONS AND SLEEP MODE ***********************// 
 void Notificaciones(){
- if(rtc.getHour(true) == 8 && rtc.getMinute()== 00 && approve==true){
+ if(rtc.getHour(true) == hora1 && rtc.getMinute()== minuto1 && approve==true){
     approve=false;
-    audio.connecttoFS(SD,"/8am_audio.mp3");
+    const char * notif1 = nombreCancion1.c_str();
+    audio.connecttoFS(SD,notif1);
     Serial.println(timeClient.getDay());
-    Serial.println("Recordatorio uno");
+    Serial.println("Recordatorio 1");
+ 
     audio.loop();
- } else if (rtc.getHour(true) == 8 && rtc.getMinute() > 00){
+ } else if (rtc.getHour(true) == hora1 && rtc.getMinute() > minuto1){
     approve=true;
  }
 }
 
 void Notificaciones1(){
- if(rtc.getHour(true) == 11 && rtc.getMinute()==00 && approve1==true){
+ if(rtc.getHour(true) == hora2 && rtc.getMinute()==minuto2 && approve1==true){
     approve1=false;
-    audio.connecttoFS(SD,"/11am_audio.mp3");
+     const char * notif2 = nombreCancion2.c_str();
+    audio.connecttoFS(SD,notif2);
     Serial.println("Recordatorio 2");
     audio.loop();
- } else if (rtc.getHour(true) == 11 && rtc.getMinute()>00){
+ } else if (rtc.getHour(true) == hora2 && rtc.getMinute()>minuto2){
     approve1=true;
  }
 }
 void Notificaciones2(){
- if(rtc.getHour(true) == 15 && rtc.getMinute()==00 && approve2==true){
+ if(rtc.getHour(true) == hora3 && rtc.getMinute()==minuto3 && approve2==true){
     approve2=false;
-    audio.connecttoFS(SD,"/3pm_audio.mp3");
-    Serial.println("Recordatorio 2");
+    const char * notif3 = nombreCancion3.c_str();
+    audio.connecttoFS(SD,notif3);
+    Serial.println("Recordatorio 3");
     audio.loop();
- } else if (rtc.getHour(true) == 15 && rtc.getMinute()>00){
+ } else if (rtc.getHour(true) == hora3 && rtc.getMinute()>minuto3){
     approve2=true;
  }
 }
 // ------- NOTIFICACIONES DE PRUEBAA -----
 
-void PRUEBA(){
- if(rtc.getHour(true) == 16 && rtc.getMinute()== 30 && approve==true){
+void Notificaciones3(){
+ if(rtc.getHour(true) == hora4 && rtc.getMinute()== minuto4 && approve==true){
     approve=false;
-    audio.connecttoFS(SD,"/8am_audio.mp3");
+     const char * notif4 = nombreCancion4.c_str();
+    audio.connecttoFS(SD,notif4);
     Serial.println(timeClient.getDay());
-    Serial.println("Recordatorio uno");
+    Serial.println("Recordatorio 4");
     audio.loop();
- } else if (rtc.getHour(true) == 16 && rtc.getMinute() > 30){
+ } else if (rtc.getHour(true) == hora4 && rtc.getMinute() > minuto4){
     approve=true;
  }
 }
 
-void PRUEBA1(){
- if(rtc.getHour(true) == 16 && rtc.getMinute()==32 && approve1==true){
-    approve1=false;
-    audio.connecttoFS(SD,"/11am_audio.mp3");
-    Serial.println("Recordatorio 2");
+void Notificaciones4(){
+ if(rtc.getHour(true) == hora5 && rtc.getMinute()==minuto5 && approve1==true){
+    approve1=false; 
+    const char * notif5 = nombreCancion5.c_str();
+    audio.connecttoFS(SD,notif5);
+    Serial.println("Recordatorio 5");
     audio.loop();
- } else if (rtc.getHour(true) == 16 && rtc.getMinute()>32){
+ } else if (rtc.getHour(true) == hora5 && rtc.getMinute()>minuto5){
     approve1=true;
- }
-}
-void PRUEBA2(){
- if(rtc.getHour(true) == 16 && rtc.getMinute()==34 && approve2==true){
-    approve2=false;
-    audio.connecttoFS(SD,"/3pm_audio.mp3");
-    Serial.println("Recordatorio 2");
-    audio.loop();
- } else if (rtc.getHour(true) == 16 && rtc.getMinute()>34){
-    approve2=true;
- }
-}
-void PRUEBA3(){
- if(rtc.getHour(true) == 16 && rtc.getMinute()== 40 && approve==true){
-    approve=false;
-    audio.connecttoFS(SD,"/8am_audio.mp3");
-    Serial.println(timeClient.getDay());
-    Serial.println("Recordatorio uno");
-    audio.loop();
- } else if (rtc.getHour(true) == 16 && rtc.getMinute() > 40){
-    approve=true;
  }
 }
 
-void PRUEBA4(){
- if(rtc.getHour(true) == 16 && rtc.getMinute()==42 && approve1==true){
-    approve1=false;
-    audio.connecttoFS(SD,"/11am_audio.mp3");
-    Serial.println("Recordatorio 2");
-    audio.loop();
- } else if (rtc.getHour(true) == 16 && rtc.getMinute()>42){
-    approve1=true;
- }
-}
-void PRUEBA5(){
- if(rtc.getHour(true) == 16 && rtc.getMinute()==44 && approve2==true){
-    approve2=false;
-    audio.connecttoFS(SD,"/3pm_audio.mp3");
-    Serial.println("Recordatorio 2");
-    audio.loop();
- } else if (rtc.getHour(true) == 16 && rtc.getMinute()>44){
-    approve2=true;
- }
-}
-void PRUEBA6(){
- if(rtc.getHour(true) == 16 && rtc.getMinute()== 50 && approve==true){
-    approve=false;
-    audio.connecttoFS(SD,"/8am_audio.mp3");
-    Serial.println(timeClient.getDay());
-    Serial.println("Recordatorio uno");
-    audio.loop();
- } else if (rtc.getHour(true) == 16 && rtc.getMinute() > 50){
-    approve=true;
- }
-}
-
-void PRUEBA7(){
- if(rtc.getHour(true) == 16 && rtc.getMinute()==52 && approve1==true){
-    approve1=false;
-    audio.connecttoFS(SD,"/11am_audio.mp3");
-    Serial.println("Recordatorio 2");
-    audio.loop();
- } else if (rtc.getHour(true) == 16 && rtc.getMinute()>52){
-    approve1=true;
- }
-}
-void PRUEBA8(){
- if(rtc.getHour(true) == 22 && rtc.getMinute()==02 && approve2==true){
-    approve2=false;
-    audio.connecttoFS(SD,"/3pm_audio.mp3");
-    Serial.println("Recordatorio 2");
-    audio.loop();
- } else if (rtc.getHour(true) == 22 && rtc.getMinute()>02){
-    approve2=true;
- }
-}
 // ------- FIN DE PRUEBAS -----------------
 
 

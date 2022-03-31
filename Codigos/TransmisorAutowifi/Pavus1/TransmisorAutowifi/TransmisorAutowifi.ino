@@ -44,6 +44,8 @@ void setup() {
   setBotones();
   //************* TIRA RGB CONFIGURATION ***********************// 
   setUpRGB();  
+ //************* Lerr recordatorios ***********************// 
+  readFile(SD, "/LeerESP.csv");
 } // setup end
 
 unsigned long last_Time = 0;
@@ -67,18 +69,15 @@ void loop() {
     ch1value=33;
   }
 //************* NOTIFICACTIONS AND SLEEP MODE ***********************// 
+
+
 Notificaciones();
 Notificaciones1();
 Notificaciones2();
-PRUEBA();
-PRUEBA1();
-PRUEBA2();
-PRUEBA3();
-PRUEBA4();
-PRUEBA5();
-PRUEBA6();
-PRUEBA7();
-PRUEBA8();
+Notificaciones3();
+Notificaciones4();
+
+
 activarBotones();
 // 
   int state=Serial.read();
