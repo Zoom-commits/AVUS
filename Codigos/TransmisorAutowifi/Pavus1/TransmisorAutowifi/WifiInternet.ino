@@ -6,16 +6,6 @@
 #include <NTPClient.h>
 #include <ESP32Time.h>
 
-// -- librerías de servidor SD -----
-#include "SPIFFS.h"
-#include "CSS.h"
-
-
-
-//String  webpage = "";
-//bool    SPIFFS_present = false;
-
-
 
 //************ DEFINICION DE TIEMPO SLEEP MODE **********************//
 #define uS_TO_S_FACTOR 1000000 //Conversion factor for micro to seconds
@@ -44,7 +34,7 @@ void rootPage() {
     "</script>"
     "</head>"
     "<body>"
-    "<h2 align=\"center\" style=\"color:blue;margin:20px;\">Bienvenido a AVUS!</h2>"
+    "<h2 align=\"center\" style=\"color:blue;margin:20px;\">Bienvenido a PAVUS!</h2>"
     "<p style=\"text-align:center;\">Por favor presione el boton de abajo para configurar el WiFi del dispositivo.</p>"
     "<p></p><p style=\"padding-top:20px;text-align:center\">" AUTOCONNECT_LINK(COG_24) "</p>"
     "</body>"
@@ -62,16 +52,11 @@ void startPage() {
 }
 //************* Server SD ***************************************************//
 void ServerSDsetup(){
-  
-  if (!SPIFFS.begin(true)) {
-    Serial.println("SPIFFS initialisation failed...");
-    SPIFFS_present = false; 
-  }
-  else
-  {
-    Serial.println(F("SPIFFS initialised... file access enabled..."));
-    SPIFFS_present = true; 
-  }
+  // The logical name http://fileserver.local will also access the device if you have 'Bonjour' running or your system supports multicast dns
+  if (!MDNS.begin(servername)) {          // Set your preferred server name, if you use "myserver" the address would be http://myserver.local/
+    Serial.println(F("Error setting up MDNS responder!")); 
+    ESP.restart(); 
+  } 
   ///////////////////////////// Server Commands 
   server.on("/",         HomePage);
   server.on("/download", File_Download);
@@ -79,7 +64,7 @@ void ServerSDsetup(){
   server.on("/fupload",  HTTP_POST,[](){ server.send(200);}, handleFileUpload);
   server.on("/stream",   File_Stream);
   server.on("/delete",   File_Delete);
-  server.on("/dir",      SPIFFS_dir);
+  server.on("/dir",      SD_dir);
   
   ///////////////////////////// End of Request commands
   server.begin();
@@ -290,14 +275,14 @@ void HomePage(){
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void File_Download(){ // This gets called twice, the first pass selects the input, the second pass then processes the command line arguments
   if (server.args() > 0 ) { // Arguments were received
-    if (server.hasArg("download")) DownloadFile(server.arg(0));
+    if (server.hasArg("download")) SD_file_download(server.arg(0));
   }
   else SelectInput("Enter filename to download","download","download");
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-void DownloadFile(String filename){
-  if (SPIFFS_present) { 
-    File download = SPIFFS.open("/"+filename,  "r");
+void SD_file_download(String filename){
+  if (SD_present) { 
+    File download = SD.open("/"+filename);
     if (download) {
       server.sendHeader("Content-Type", "text/text");
       server.sendHeader("Content-Disposition", "attachment; filename="+filename);
@@ -305,10 +290,11 @@ void DownloadFile(String filename){
       server.streamFile(download, "application/octet-stream");
       download.close();
     } else ReportFileNotPresent("download"); 
-  } else ReportSPIFFSNotPresent();
+  } else ReportSDNotPresent();
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void File_Upload(){
+  Serial.println("File upload stage-1");
   append_page_header();
   webpage += F("<h3>Select File to Upload</h3>"); 
   webpage += F("<FORM action='/fupload' method='post' enctype='multipart/form-data'>");
@@ -316,23 +302,28 @@ void File_Upload(){
   webpage += F("<br><button class='buttons' style='width:10%' type='submit'>Upload File</button><br>");
   webpage += F("<a href='/'>[Back]</a><br><br>");
   append_page_footer();
+  Serial.println("File upload stage-2");
   server.send(200, "text/html",webpage);
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 File UploadFile; 
 void handleFileUpload(){ // upload a new file to the Filing system
+  Serial.println("File upload stage-3");
   HTTPUpload& uploadfile = server.upload(); // See https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WebServer/srcv
                                             // For further information on 'status' structure, there are other reasons such as a failed transfer that could be used
   if(uploadfile.status == UPLOAD_FILE_START)
   {
+    Serial.println("File upload stage-4");
     String filename = uploadfile.filename;
     if(!filename.startsWith("/")) filename = "/"+filename;
     Serial.print("Upload File Name: "); Serial.println(filename);
-    SPIFFS.remove(filename);                  // Remove a previous version, otherwise data is appended the file again
-    UploadFile = SPIFFS.open(filename, "w");  // Open the file for writing in SPIFFS (create it, if doesn't exist)
+    SD.remove(filename);                         // Remove a previous version, otherwise data is appended the file again
+    UploadFile = SD.open(filename, FILE_WRITE);  // Open the file for writing in SPIFFS (create it, if doesn't exist)
+    filename = String();
   }
   else if (uploadfile.status == UPLOAD_FILE_WRITE)
   {
+    Serial.println("File upload stage-5");
     if(UploadFile) UploadFile.write(uploadfile.buf, uploadfile.currentSize); // Write the received bytes to the file
   } 
   else if (uploadfile.status == UPLOAD_FILE_END)
@@ -356,10 +347,9 @@ void handleFileUpload(){ // upload a new file to the Filing system
   }
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//#ifdef ESP32
-void SPIFFS_dir(){ 
-  if (SPIFFS_present) { 
-    File root = SPIFFS.open("/");
+void SD_dir(){
+  if (SD_present) { 
+    File root = SD.open("/");
     if (root) {
       root.rewindDirectory();
       SendHTML_Header();
@@ -379,11 +369,14 @@ void SPIFFS_dir(){
     append_page_footer();
     SendHTML_Content();
     SendHTML_Stop();   // Stop is needed because no content length was sent
-  } else ReportSPIFFSNotPresent();
+  } else ReportSDNotPresent();
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void printDirectory(const char * dirname, uint8_t levels){
-  File root = SPIFFS.open(dirname);
+  File root = SD.open(dirname);
+  #ifdef ESP8266
+  root.rewindDirectory(); //Only needed for ESP8266
+  #endif
   if(!root){
     return;
   }
@@ -396,12 +389,15 @@ void printDirectory(const char * dirname, uint8_t levels){
       SendHTML_Content();
     }
     if(file.isDirectory()){
+      Serial.println(String(file.isDirectory()?"Dir ":"File ")+String(file.name()));
       webpage += "<tr><td>"+String(file.isDirectory()?"Dir":"File")+"</td><td>"+String(file.name())+"</td><td></td></tr>";
       printDirectory(file.name(), levels-1);
     }
     else
     {
+      //Serial.print(String(file.name())+"\t");
       webpage += "<tr><td>"+String(file.name())+"</td>";
+      Serial.print(String(file.isDirectory()?"Dir ":"File ")+String(file.name())+"\t");
       webpage += "<td>"+String(file.isDirectory()?"Dir":"File")+"</td>";
       int bytes = file.size();
       String fsize = "";
@@ -410,62 +406,24 @@ void printDirectory(const char * dirname, uint8_t levels){
       else if(bytes < (1024 * 1024 * 1024)) fsize = String(bytes/1024.0/1024.0,3)+" MB";
       else                                  fsize = String(bytes/1024.0/1024.0/1024.0,3)+" GB";
       webpage += "<td>"+fsize+"</td></tr>";
+      Serial.println(String(fsize));
     }
     file = root.openNextFile();
   }
   file.close();
 }
-//#endif
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//#ifdef ESP8266
-//void SPIFFS_dir(){
-//  String str;
-//  if (SPIFFS_present) { 
-//    Dir dir = SPIFFS.openDir("/");
-//    SendHTML_Header();
-//    webpage += F("<h3 class='rcorners_m'>SPIFFS Card Contents</h3><br>");
-//    webpage += F("<table align='center'>");
-//    webpage += F("<tr><th>Name/Type</th><th style='width:40%'>File Size</th></tr>");
-//    while (dir.next()) {
-//      Serial.print(dir.fileName());
-//      webpage += "<tr><td>"+String(dir.fileName())+"</td>";
-//      str  = dir.fileName();
-//      str += " / ";
-//      if(dir.fileSize()) {
-//        File f = dir.openFile("r");
-//        Serial.println(f.size());
-//        int bytes = f.size();
-//        String fsize = "";
-//        if (bytes < 1024)                     fsize = String(bytes)+" B";
-//        else if(bytes < (1024 * 1024))        fsize = String(bytes/1024.0,3)+" KB";
-//        else if(bytes < (1024 * 1024 * 1024)) fsize = String(bytes/1024.0/1024.0,3)+" MB";
-//        else                                  fsize = String(bytes/1024.0/1024.0/1024.0,3)+" GB";
-//        webpage += "<td>"+fsize+"</td></tr>";
-//        f.close();
-//      }
-//      str += String(dir.fileSize());
-//      str += "\r\n";
-//      Serial.println(str);
-//    }
-//    webpage += F("</table>");
-//    SendHTML_Content();
-//    append_page_footer();
-//    SendHTML_Content();
-//    SendHTML_Stop();   // Stop is needed because no content length was sent
-//  } else ReportSPIFFSNotPresent();
-//}
-//#endif
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void File_Stream(){
   if (server.args() > 0 ) { // Arguments were received
-    if (server.hasArg("stream")) SPIFFS_file_stream(server.arg(0));
+    if (server.hasArg("stream")) SD_file_stream(server.arg(0));
   }
   else SelectInput("Enter a File to Stream","stream","stream");
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-void SPIFFS_file_stream(String filename) { 
-  if (SPIFFS_present) { 
-    File dataFile = SPIFFS.open("/"+filename,  "r"); // Now read data from SPIFFS Card 
+void SD_file_stream(String filename) { 
+  if (SD_present) { 
+    File dataFile = SD.open("/"+filename, FILE_READ); // Now read data from SD Card 
+    Serial.print("Streaming file: "); Serial.println(filename);
     if (dataFile) { 
       if (dataFile.available()) { // If data is available and present 
         String dataType = "application/octet-stream"; 
@@ -473,23 +431,24 @@ void SPIFFS_file_stream(String filename) {
       }
       dataFile.close(); // close the file: 
     } else ReportFileNotPresent("Cstream");
-  } else ReportSPIFFSNotPresent(); 
+  } else ReportSDNotPresent(); 
 }   
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void File_Delete(){
   if (server.args() > 0 ) { // Arguments were received
-    if (server.hasArg("delete")) SPIFFS_file_delete(server.arg(0));
+    if (server.hasArg("delete")) SD_file_delete(server.arg(0));
   }
   else SelectInput("Select a File to Delete","delete","delete");
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-void SPIFFS_file_delete(String filename) { // Delete the file 
-  if (SPIFFS_present) { 
+void SD_file_delete(String filename) { // Delete the file 
+  if (SD_present) { 
     SendHTML_Header();
-    File dataFile = SPIFFS.open("/"+filename, "r"); // Now read data from SPIFFS Card 
+    File dataFile = SD.open("/"+filename, FILE_READ); // Now read data from SD Card 
+    Serial.print("Deleting file: "); Serial.println(filename);
     if (dataFile)
     {
-      if (SPIFFS.remove("/"+filename)) {
+      if (SD.remove("/"+filename)) {
         Serial.println(F("File deleted successfully"));
         webpage += "<h3>File '"+filename+"' has been erased</h3>"; 
         webpage += F("<a href='/delete'>[Back]</a><br><br>");
@@ -503,7 +462,7 @@ void SPIFFS_file_delete(String filename) { // Delete the file
     append_page_footer(); 
     SendHTML_Content();
     SendHTML_Stop();
-  } else ReportSPIFFSNotPresent();
+  } else ReportSDNotPresent();
 } 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void SendHTML_Header(){
@@ -533,15 +492,14 @@ void SelectInput(String heading1, String command, String arg_calling_name){
   webpage += F("<FORM action='/"); webpage += command + "' method='post'>"; // Must match the calling argument e.g. '/chart' calls '/chart' after selection but with arguments!
   webpage += F("<input type='text' name='"); webpage += arg_calling_name; webpage += F("' value=''><br>");
   webpage += F("<type='submit' name='"); webpage += arg_calling_name; webpage += F("' value=''><br><br>");
-  webpage += F("<a href='/'>[Back]</a><br><br>");
   append_page_footer();
   SendHTML_Content();
   SendHTML_Stop();
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-void ReportSPIFFSNotPresent(){
+void ReportSDNotPresent(){
   SendHTML_Header();
-  webpage += F("<h3>No SPIFFS Card present</h3>"); 
+  webpage += F("<h3>No SD Card present</h3>"); 
   webpage += F("<a href='/'>[Back]</a><br><br>");
   append_page_footer();
   SendHTML_Content();

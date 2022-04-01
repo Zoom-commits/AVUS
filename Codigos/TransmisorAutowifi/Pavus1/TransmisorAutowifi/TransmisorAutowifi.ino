@@ -15,11 +15,18 @@ Audio             audio;
 /*
  * SET UP START
  */
-#define ServerVersion "1.0"
+//**
+// -- librerías de servidor SD -----
+//#include <ESP32WebServer.h>    // https://github.com/Pedroalbuquerque/ESP32WebServer download and place in your Libraries folder
+#include <ESPmDNS.h>
+#include "Network.h"
+#include "Sys_Variables.h"
+#include "CSS.h"
+//**
 String Device = "";
 String humi = "";
-String  webpage = "";
-bool    SPIFFS_present = false;
+
+
 int ch1value = 0;
 
 void setup() {
