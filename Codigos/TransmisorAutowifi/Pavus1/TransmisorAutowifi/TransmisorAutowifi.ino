@@ -15,8 +15,11 @@ Audio             audio;
 /*
  * SET UP START
  */
+#define ServerVersion "1.0"
 String Device = "";
 String humi = "";
+String  webpage = "";
+bool    SPIFFS_present = false;
 int ch1value = 0;
 
 void setup() {
@@ -44,13 +47,18 @@ void setup() {
   setBotones();
   //************* TIRA RGB CONFIGURATION ***********************// 
   setUpRGB();  
- //************* Lerr recordatorios ***********************// 
+ //************* Leer recordatorios ***********************// 
   readFile(SD, "/LeerESP.csv");
+
+  //************* Set-up SERVER SD ***********************// 
+  ServerSDsetup();
 } // setup end
 
 unsigned long last_Time = 0;
 
 void loop() {
+  
+  request(); // request Server SD
   
   ch1value = receive_the_data();
   portalcito();
