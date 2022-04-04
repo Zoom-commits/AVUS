@@ -15,18 +15,8 @@ Audio             audio;
 /*
  * SET UP START
  */
-//**
-// -- librerías de servidor SD -----
-//#include <ESP32WebServer.h>    // https://github.com/Pedroalbuquerque/ESP32WebServer download and place in your Libraries folder
-#include <ESPmDNS.h>
-#include "Network.h"
-#include "Sys_Variables.h"
-#include "CSS.h"
-//**
 String Device = "";
 String humi = "";
-
-
 int ch1value = 0;
 
 void setup() {
@@ -54,18 +44,13 @@ void setup() {
   setBotones();
   //************* TIRA RGB CONFIGURATION ***********************// 
   setUpRGB();  
- //************* Leer recordatorios ***********************// 
+ //************* Lerr recordatorios ***********************// 
   readFile(SD, "/LeerESP.csv");
-
-  //************* Set-up SERVER SD ***********************// 
-  ServerSDsetup();
 } // setup end
 
 unsigned long last_Time = 0;
 
 void loop() {
-  
-  request(); // request Server SD
   
   ch1value = receive_the_data();
   portalcito();
