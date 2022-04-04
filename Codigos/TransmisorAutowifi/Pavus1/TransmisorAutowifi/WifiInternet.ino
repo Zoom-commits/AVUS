@@ -50,30 +50,7 @@ void startPage() {
   Server.client().flush();
   Server.client().stop();
 }
-//************* Server SD ***************************************************//
-void ServerSDsetup(){
-  // The logical name http://fileserver.local will also access the device if you have 'Bonjour' running or your system supports multicast dns
-  if (!MDNS.begin(servername)) {          // Set your preferred server name, if you use "myserver" the address would be http://myserver.local/
-    Serial.println(F("Error setting up MDNS responder!")); 
-    ESP.restart(); 
-  } 
-  ///////////////////////////// Server Commands 
-  server.on("/",         HomePage);
-  server.on("/download", File_Download);
-  server.on("/upload",   File_Upload);
-  server.on("/fupload",  HTTP_POST,[](){ server.send(200);}, handleFileUpload);
-  server.on("/stream",   File_Stream);
-  server.on("/delete",   File_Delete);
-  server.on("/dir",      SD_dir);
-  
-  ///////////////////////////// End of Request commands
-  server.begin();
-  Serial.println("HTTP server started");
-}
 
-void request(){
-  server.handleClient(); // Listen for client connections
-}
 
 
 //************* IFTTT ***************************************************//
@@ -140,6 +117,31 @@ void configSetUp(){
     Serial.println("WiFi connected: " + WiFi.localIP().toString());
     Serial.println(WiFi.getHostname());
   }
+}
+//************* Server SD ***************************************************//
+void ServerSDsetup(){
+  // The logical name http://fileserver.local will also access the device if you have 'Bonjour' running or your system supports multicast dns
+  if (!MDNS.begin(servername)) {          // Set your preferred server name, if you use "myserver" the address would be http://myserver.local/
+    Serial.println(F("Error setting up MDNS responder!")); 
+    ESP.restart(); 
+  } 
+  ///////////////////////////// Server Commands 
+  server.on("/", append_page_header);
+  server.on("/",         HomePage);
+  server.on("/download", File_Download);
+  server.on("/upload",   File_Upload);
+  server.on("/fupload",  HTTP_POST,[](){ server.send(200);}, handleFileUpload);
+  server.on("/stream",   File_Stream);
+  server.on("/delete",   File_Delete);
+  server.on("/dir",      SD_dir);
+  
+  ///////////////////////////// End of Request commands
+  server.begin();
+  Serial.println("HTTP server started");
+}
+
+void request(){
+  server.handleClient(); // Listen for client connections
 }
 //************* IFTTT data sending function ***********************// 
 void WiFi_SendData() {
