@@ -1,6 +1,6 @@
 //************ LIBRERIAS DE WIFI ***************************************//
 #include <WiFi.h>
-#include <WebServer.h>
+#include <Webserver.h>
 #include <time.h>
 #include <AutoConnect.h>
 #include <NTPClient.h>
@@ -13,15 +13,15 @@
 
 //************ DEFINICION DE SERVIDOR IFTTT ************************//
 #define key "dcd50PRWdVFAnMTFbBRKRU"; 
-#define Event "PAVUS 1";
+#define Event "server 1";
 
-WebServer         Server;
-AutoConnect       Portal(Server);
+Webserver         server;
+AutoConnect       Portal(server);
 AutoConnectConfig Config;       // Enable autoReconnect supported on v0.9.4
 WiFiClient        client;
 
 
-WebServer server(80); // Web Server SD
+Webserver server(80); // Web server SD
 
 //************* Pagina HTML para configurar el WiFi **********************//
 void rootPage() {
@@ -34,45 +34,21 @@ void rootPage() {
     "</script>"
     "</head>"
     "<body>"
-    "<h2 align=\"center\" style=\"color:blue;margin:20px;\">Bienvenido a PAVUS!</h2>"
+    "<h2 align=\"center\" style=\"color:blue;margin:20px;\">Bienvenido a server!</h2>"
     "<p style=\"text-align:center;\">Por favor presione el boton de abajo para configurar el WiFi del dispositivo.</p>"
     "<p></p><p style=\"padding-top:20px;text-align:center\">" AUTOCONNECT_LINK(COG_24) "</p>"
     "</body>"
     "</html>";
 
-  Server.send(200, "text/html", content);
+  server.send(200, "text/html", content);
 }
 void startPage() {
   // The /start page just constitutes timezone,
   // it redirects to the root page without the content response.
-  Server.sendHeader("Location", String("http://") + Server.client().localIP().toString() + String("/"));
-  Server.send(302, "text/plain", "");
-  Server.client().flush();
-  Server.client().stop();
-}
-//************* Server SD ***************************************************//
-void ServerSDsetup(){
-  // The logical name http://fileserver.local will also access the device if you have 'Bonjour' running or your system supports multicast dns
-  if (!MDNS.begin(servername)) {          // Set your preferred server name, if you use "myserver" the address would be http://myserver.local/
-    Serial.println(F("Error setting up MDNS responder!")); 
-    ESP.restart(); 
-  } 
-  ///////////////////////////// Server Commands 
-  server.on("/",         HomePage);
-  server.on("/download", File_Download);
-  server.on("/upload",   File_Upload);
-  server.on("/fupload",  HTTP_POST,[](){ server.send(200);}, handleFileUpload);
-  server.on("/stream",   File_Stream);
-  server.on("/delete",   File_Delete);
-  server.on("/dir",      SD_dir);
-  
-  ///////////////////////////// End of Request commands
-  server.begin();
-  Serial.println("HTTP server started");
-}
-
-void request(){
-  server.handleClient(); // Listen for client connections
+  server.sendHeader("Location", String("http://") + server.client().localIP().toString() + String("/"));
+  server.send(302, "text/plain", "");
+  server.client().flush();
+  server.client().stop();
 }
 
 
@@ -134,6 +110,32 @@ void configSetUp(){
 //************* Servidor web de configuración *************************//
   Server.on("/", rootPage);
   Server.on("/start", startPage);   // Set NTP server trigger handler
+
+//************* server SD ***************************************************//
+void serverSDsetup(){
+  // The logical name http://fileserver.local will also access the device if you have 'Bonjour' running or your system supports multicast dns
+  if (!MDNS.begin(servername)) {          // Set your preferred server name, if you use "myserver" the address would be http://myserver.local/
+    Serial.println(F("Error setting up MDNS responder!")); 
+    ESP.restart(); 
+  } 
+  ///////////////////////////// Server Commands 
+  server.on("/",         HomePage);
+  server.on("/download", File_Download);
+  server.on("/upload",   File_Upload);
+  server.on("/fupload",  HTTP_POST,[](){ server.send(200);}, handleFileUpload);
+  server.on("/stream",   File_Stream);
+  server.on("/delete",   File_Delete);
+  server.on("/dir",      SD_dir);
+  
+  ///////////////////////////// End of Request commands
+  server.begin();
+  Serial.println("HTTP server started");
+}
+
+void request(){
+  server.handleClient(); // Listen for client connections
+}
+
 
 // Establish a connection with an autoReconnect option.
   if (Portal.begin()) {
