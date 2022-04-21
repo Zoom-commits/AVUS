@@ -36,7 +36,7 @@ int melodyPin = 3;
 const int PinSalir = LOW;
 
 // change this to make the song slower or faster
-int tempo = 60;
+int tempo = 140;
 
 // change this to whichever pin you want to use
 int buzzer = 3;
