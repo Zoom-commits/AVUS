@@ -13,7 +13,7 @@
 
 //************ DEFINICION DE SERVIDOR IFTTT ************************//
 #define key "dcd50PRWdVFAnMTFbBRKRU"; 
-#define Event "PAVUS 1";
+#define Event "PAVUS 2";
 
 WebServer         Server;
 AutoConnect       Portal(Server);
