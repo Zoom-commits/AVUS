@@ -32,14 +32,14 @@ int ReadVoltage ;
 int up = 0;
 int down = 0;
 /**************************************************/
-int melodyPin = 7;
+int melodyPin = 3;
 const int PinSalir = LOW;
 
 // change this to make the song slower or faster
-int tempo = 60;
+int tempo = 120;
 
 // change this to whichever pin you want to use
-int buzzer = 7;
+int buzzer = 3;
 
 // notes of the moledy followed by the duration.
 // a 4 means a quarter note, 8 an eighteenth , 16 sixteenth, so on
@@ -126,7 +126,7 @@ void loop()
       //Receive the radio data
       receive_the_data();
       ch1_value = received_data.ch1;
-//      Serial.println(ch1_value);
+     // Serial.println(ch1_value);
      
       if (ch1_value == 55) {
         //Serial.println("bbb");
