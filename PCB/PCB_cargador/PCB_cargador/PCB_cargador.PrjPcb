@@ -796,150 +796,78 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for PCB_cargador\NC Drill\PCB_V2.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for PCB_cargador\NC Drill\PCB_V2.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2.REP
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2.RUL
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for PCB_cargador\NC Drill\PCB_V2.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Copper_Signal_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Copper_Signal_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Legend_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Legend_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Mechanical_1.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Mechanical_13.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Mechanical_15.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Paste_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Paste_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Profile.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Soldermask_Bot.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument18]
-DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V2_Soldermask_Top.gbr
-DItemRevisionGUID=
-
-[GeneratedDocument19]
 DocumentPath=Project Outputs for PCB_cargador\NC Drill\PCB_V3-RoundHoles.TXT
 DItemRevisionGUID=
 
-[GeneratedDocument20]
+[GeneratedDocument2]
 DocumentPath=Project Outputs for PCB_cargador\NC Drill\PCB_V3-SlotHoles.TXT
 DItemRevisionGUID=
 
-[GeneratedDocument21]
+[GeneratedDocument3]
 DocumentPath=Project Outputs for PCB_cargador\NC Drill\PCB_V3.DRR
 DItemRevisionGUID=
 
-[GeneratedDocument22]
+[GeneratedDocument4]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument23]
+[GeneratedDocument5]
 DocumentPath=Project Outputs for PCB_cargador\NC Drill\PCB_V3.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument24]
+[GeneratedDocument6]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3.REP
 DItemRevisionGUID=
 
-[GeneratedDocument25]
+[GeneratedDocument7]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3.RUL
 DItemRevisionGUID=
 
-[GeneratedDocument26]
+[GeneratedDocument8]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Copper_Signal_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument27]
+[GeneratedDocument9]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Copper_Signal_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument28]
+[GeneratedDocument10]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Legend_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument29]
+[GeneratedDocument11]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Legend_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument30]
+[GeneratedDocument12]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Mechanical_1.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument31]
+[GeneratedDocument13]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Mechanical_13.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument32]
+[GeneratedDocument14]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Mechanical_15.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument33]
+[GeneratedDocument15]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Paste_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument34]
+[GeneratedDocument16]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Paste_Top.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument35]
+[GeneratedDocument17]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Profile.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument36]
+[GeneratedDocument18]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Soldermask_Bot.gbr
 DItemRevisionGUID=
 
-[GeneratedDocument37]
+[GeneratedDocument19]
 DocumentPath=Project Outputs for PCB_cargador\GerberX2\PCB_V3_Soldermask_Top.gbr
 DItemRevisionGUID=
 
